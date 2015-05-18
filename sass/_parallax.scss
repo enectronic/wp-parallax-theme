@@ -15,7 +15,7 @@
 	background: linear-gradient(to bottom, rgba(46,88,122,1) 0%,rgba(165,221,234,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e587a', endColorstr='#a5ddea',GradientType=0 );
 	@media screen and (max-width: 960px) {
-	    min-height: 50vh;
+    min-height: 50vh;
 	}
 }
 
@@ -33,7 +33,7 @@
 .parallax__layer--climber {
 	transform: translateY(-10%);
 	@media screen and (max-width: 640px) {
-	    display: none;
+    display: none;
 	}
 }
 
@@ -44,7 +44,7 @@
 	width: 250px;
 	transform: translateY(-100%);
 	@media screen and (max-width: 960px) {
-	    display: none;
+    display: none;
 	}
 }
 
@@ -66,10 +66,10 @@
 	transform: translate3d(-50%, -50%, 0);
 	width: 350px;
 	@media screen and (max-width: 960px) {
-	    width: 200px;
+    width: 200px;
 	}
 	@media screen and (max-width: 400px) {
-	    width: 150px;
+    width: 150px;
 	}
 }
 
