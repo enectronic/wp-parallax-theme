@@ -149,8 +149,8 @@
     <p class="team__body">På LS har vi samarbetat i små personliga grupper sedan 2006 och vi har alla en gemensam strävan efter att hela tiden leverera professionella och ändamålsenliga produkter. Fortsätt en sammanfattande, kärnfull och kort beskrivning som framhåller den lilla gruppen.</p>
     <div class="team__members">
       <div class="team__member">
-        <div class="team__member__image">
-          <? // Image will be inserted here ?>
+        <div class="team__member__image__container">
+          <img class="team__member__image" src="<?php bloginfo('template_directory'); ?>/img/parallax_balloon.min.png" />
         </div>
         <h3 class="team__member__name">Fredrik Saaf</h3>
         <p class="team__member__role">VD / Back-endutvecklare</p>
@@ -164,8 +164,8 @@
         </div>
       </div>
       <div class="team__member">
-        <div class="team__member__image">
-          <? // Image will be inserted here ?>
+        <div class="team__member__image__container">
+          <img class="team__member__image" src="<?php bloginfo('template_directory'); ?>/img/parallax_balloon.min.png" />
         </div>
         <h3 class="team__member__name">Sara Brandberg</h3>
         <p class="team__member__role">Webbdesigner / Formgivare</p>
@@ -179,18 +179,20 @@
         </div>
       </div>
       <div class="team__member">
-        <div class="team__member__image">
-          <? // Image will be inserted here ?>
+        <div class="team__member__image__container">
+          <img class="team__member__image" src="<?php bloginfo('template_directory'); ?>/img/parallax_balloon.min.png" />
         </div>
-        <h3 class="team__member__name">Johan Ljung</h3>
-        <p class="team__member__role">Front-endutvecklare</p>
-        <p class="team__member__text">Johan är vår starke man och den som obevekligt driver oss alla in i det ena mer nervkittlande projektet efter det andra. Totalt orädd och en idéspruta utan dess like. Den här texten ska vara lite rolig och mer personbeskrivande än detaljerad.</p>
-        <div class="team__member__contact">
-          <?php // insert image here! ?>
-          <p class="team__member__contact__email">johan.ljung@lsentertainment.se</p>
+        <div class="team__member__info">
+          <h3 class="team__member__name">Johan Ljung</h3>
+          <p class="team__member__role">Front-endutvecklare</p>
+          <p class="team__member__text">Johan är vår starke man och den som obevekligt driver oss alla in i det ena mer nervkittlande projektet efter det andra. Totalt orädd och en idéspruta utan dess like. Den här texten ska vara lite rolig och mer personbeskrivande än detaljerad.</p>
+          <div class="team__member__contact">
+            <?php // insert image here! ?>
+            <p class="team__member__contact__email">johan.ljung@lsentertainment.se</p>
 
-          <?php // insert phone picture here ?>
-          <p class="team__member__contact__phone">072 205 89 37</p>
+            <?php // insert phone picture here ?>
+            <p class="team__member__contact__phone">072 205 89 37</p>
+          </div>
         </div>
       </div>
     </div>
