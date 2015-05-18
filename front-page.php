@@ -7,34 +7,34 @@
 */
 ?>
 <header class="parallax">
-	<div class="parallax__group">		
-		<img class="parallax__layer parallax__layer--water" 
-			 src="<?php bloginfo('template_directory'); ?>/img/parallax_sea.min.png"
-			 id="water" width="1921">
-		
+	<div class="parallax__group">
+		<img class="parallax__layer parallax__layer--water"
+      src="<?php bloginfo('template_directory'); ?>/img/parallax_sea.min.png"
+      id="water" width="1921">
+
 		<img src="<?php bloginfo('template_directory'); ?>/img/parallax_clouds_back.min.png"
-			 class="parallax__layer parallax__layer--clouds-back"
-			 id="clouds-back" width="1741">
-			
+      class="parallax__layer parallax__layer--clouds-back"
+      id="clouds-back" width="1741">
+
 		<img src="<?php bloginfo('template_directory'); ?>/img/parallax_balloon.min.png"
-			 class="parallax__layer parallax__layer--balloon"
-			 id="balloon" width="250">
-			
+      class="parallax__layer parallax__layer--balloon"
+      id="balloon" width="250">
+
 		<img src="<?php bloginfo('template_directory'); ?>/img/parallax_logo.min.png"
-			 class="parallax__layer parallax__layer--logo"
-			 id="logo" width="350">
+      class="parallax__layer parallax__layer--logo"
+      id="logo" width="350">
 
 		<img src="<?php bloginfo('template_directory'); ?>/img/parallax_clouds_front.min.png"
-			 class="parallax__layer parallax__layer--clouds-front"
-			 id="clouds-front" width="1183" >
-		
+      class="parallax__layer parallax__layer--clouds-front"
+      id="clouds-front" width="1183" >
+
 		<img src="<?php bloginfo('template_directory'); ?>/img/parallax_climber.min.png"
-			 class="parallax__layer parallax__layer--climber"
-			 id="climber" width="263">
-			
+      class="parallax__layer parallax__layer--climber"
+      id="climber" width="263">
+
 		<img src="<?php bloginfo('template_directory'); ?>/img/parallax_rock.min.png"
-			 class="parallax__layer parallax__layer--rocks"
-			 id="rocks" width="1920">
+      class="parallax__layer parallax__layer--rocks"
+      id="rocks" width="1920">
 	</div>
 </header>
 
