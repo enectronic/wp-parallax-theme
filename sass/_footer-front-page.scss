@@ -1,0 +1,39 @@
+// The front page footer container
+.footer-front-page {
+  // Component styles
+  float: left;
+  width: 100%;
+  padding: $padding;
+  background: rgb(29, 42, 62);
+}
+
+// Inner footer wrapper
+.footer-front-page__content {
+  // Neat grid mixins
+  @include outer-container;
+  padding: $padding;
+}
+
+// The footer heading text
+.footer-front-page__heading {
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: $padding;
+  font-size: 3vw;
+  color: $red;
+  border-bottom: 1px solid #fff;
+}
+
+// The footer text content
+.footer-front-page__text {
+  padding: 0 $padding;
+  margin-top: $margin;
+  color: #fff;
+  line-height: 1.5;
+}
+
+// Highlights in the footer text
+.footer-front-page__highlight {
+  font-weight: 800;
+  font-size: 1.2rem;
+}
