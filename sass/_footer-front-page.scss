@@ -3,8 +3,17 @@
   // Component styles
   float: left;
   width: 100%;
-  padding: $padding;
   background: rgb(13, 38, 60);
+}
+
+// The div holding the image
+.footer-front-page__image__container {
+  background: rgb(207, 225, 230);
+}
+
+.footer-front-page__image {
+  margin-bottom: -5px;
+  width: 100%;
 }
 
 // Inner footer wrapper
@@ -22,6 +31,11 @@
   font-size: 3vw;
   color: $red;
   border-bottom: 1px solid #fff;
+
+  // Component responsive queries
+  @media screen and ( max-width: 720px ) {
+    font-size: 5vw;
+  }
 }
 
 // The footer text content
@@ -30,6 +44,11 @@
   margin-top: $margin;
   color: #fff;
   line-height: 1.5;
+
+  // Component responsive queries
+  @media screen and ( max-width: 720px ) {
+    padding: 0;
+  }
 }
 
 // Highlights in the footer text

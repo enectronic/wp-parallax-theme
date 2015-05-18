@@ -52,11 +52,6 @@ html, body {
 .container--blue-gradient {
   @extend .container;
   @include linear-gradient(rgb(130, 172, 197), rgb(207, 225, 230));
-
-  // Component style
-  background-image: url(img/parallax_rock.min.png);
-  background-repeat: no-repeat;
-  background-position: bottom;
 }
 
 // Float classes

@@ -145,37 +145,38 @@
 ?>
 <div class="container--blue-gradient">
   <div class="team">
-    <h2 class="team__heading">Vårt team</h2>
-    <p class="team__body">På LS har vi samarbetat i små personliga grupper sedan 2006 och vi har alla en gemensam strävan efter att hela tiden leverera professionella och ändamålsenliga produkter. Fortsätt en sammanfattande, kärnfull och kort beskrivning som framhåller den lilla gruppen.</p>
+    <?php if ( get_field( 'team-headline' ) ): ?>
+    <h2 class="team__heading"><?php the_field( 'team-headline' ) ?></h2>
+    <?php endif; ?>
+    <?php if ( get_field( 'team-body-text' ) ): ?>
+    <p class="team__body"><?php the_field( 'team-body-text' ) ?></p>
+    <?php endif; ?>
     <div class="team__members">
       <div class="team__member">
         <div class="team__member__image__container">
           <img class="team__member__image" src="<?php bloginfo('template_directory'); ?>/img/parallax_balloon.min.png" />
         </div>
-        <h3 class="team__member__name">Fredrik Saaf</h3>
-        <p class="team__member__role">VD / Back-endutvecklare</p>
-        <p class="team__member__text">Fredrik är vår starke man och den som obevekligt driver oss alla in i det ena mer nervkittlande projektet efter det andra. Totalt orädd och en idéspruta utan dess like. Den här texten ska vara lite rolig och mer personbeskrivande än detaljerad.</p>
-        <div class="team__member__contact">
-          <?php // insert image here! ?>
-          <p class="team__member__contact__email">fredrik.saaf@lsentertainment.se</p>
+        <div class="team__member__info">
+          <?php if ( get_field( 'person-1-name' ) ): ?>
+          <h3 class="team__member__name"><?php the_field( 'person-1-name' ) ?></h3>
+          <?php endif; ?>
+          <?php if ( get_field( 'person-1-profession' ) ): ?>
+          <p class="team__member__role"><?php the_field( 'person-1-profession' ) ?></p>
+          <?php endif; ?>
+          <?php if ( get_field( 'person-1-text' ) ): ?>
+          <p class="team__member__text"><?php the_field( 'person-1-text' ) ?></p>
+          <?php endif; ?>
+          <div class="team__member__contact">
+            <?php if ( get_field( 'person-1-email' ) ): ?>
+            <?php // insert image here! ?>
+            <p class="team__member__contact__email"><?php the_field( 'person-1-email' ) ?></p>
+            <?php endif; ?>
 
-          <?php // insert phone picture here ?>
-          <p class="team__member__contact__phone">073 614 56 14</p>
-        </div>
-      </div>
-      <div class="team__member">
-        <div class="team__member__image__container">
-          <img class="team__member__image" src="<?php bloginfo('template_directory'); ?>/img/parallax_balloon.min.png" />
-        </div>
-        <h3 class="team__member__name">Sara Brandberg</h3>
-        <p class="team__member__role">Webbdesigner / Formgivare</p>
-        <p class="team__member__text">Sara är vår starke man och den som obevekligt driver oss alla in i det ena mer nervkittlande projektet efter det andra. Totalt orädd och en idéspruta utan dess like. Den här texten ska vara lite rolig och mer personbeskrivande än detaljerad.</p>
-        <div class="team__member__contact">
-          <?php // insert image here! ?>
-          <p class="team__member__contact__email">sara.brandberg@lsentertainment.se</p>
-
-          <?php // insert phone picture here ?>
-          <p class="team__member__contact__phone">073 123 45 67</p>
+            <?php if ( get_field( 'person-1-phone' ) ): ?>
+            <?php // insert phone picture here ?>
+            <p class="team__member__contact__phone"><?php the_field( 'person-1-phone' ) ?></p>
+            <?php endif; ?>
+          </div>
         </div>
       </div>
       <div class="team__member">
@@ -183,15 +184,52 @@
           <img class="team__member__image" src="<?php bloginfo('template_directory'); ?>/img/parallax_balloon.min.png" />
         </div>
         <div class="team__member__info">
-          <h3 class="team__member__name">Johan Ljung</h3>
-          <p class="team__member__role">Front-endutvecklare</p>
-          <p class="team__member__text">Johan är vår starke man och den som obevekligt driver oss alla in i det ena mer nervkittlande projektet efter det andra. Totalt orädd och en idéspruta utan dess like. Den här texten ska vara lite rolig och mer personbeskrivande än detaljerad.</p>
+          <?php if ( get_field( 'person-2-name' ) ): ?>
+          <h3 class="team__member__name"><?php the_field( 'person-2-name' ) ?></h3>
+          <?php endif; ?>
+          <?php if ( get_field( 'person-2-profession' ) ): ?>
+          <p class="team__member__role"><?php the_field( 'person-2-profession' ) ?></p>
+          <?php endif; ?>
+          <?php if ( get_field( 'person-2-text' ) ): ?>
+          <p class="team__member__text"><?php the_field( 'person-2-text' ) ?></p>
+          <?php endif; ?>
           <div class="team__member__contact">
+            <?php if ( get_field( 'person-2-email' ) ): ?>
             <?php // insert image here! ?>
-            <p class="team__member__contact__email">johan.ljung@lsentertainment.se</p>
+            <p class="team__member__contact__email"><?php the_field( 'person-2-email' ) ?></p>
+            <?php endif; ?>
 
+            <?php if ( get_field( 'person-2-phone' ) ): ?>
             <?php // insert phone picture here ?>
-            <p class="team__member__contact__phone">072 205 89 37</p>
+            <p class="team__member__contact__phone"><?php the_field( 'person-2-phone' ) ?></p>
+            <?php endif; ?>
+          </div>
+        </div>
+      </div>
+      <div class="team__member">
+        <div class="team__member__image__container">
+          <img class="team__member__image" src="<?php bloginfo('template_directory'); ?>/img/parallax_balloon.min.png" />
+        </div>
+        <div class="team__member__info">
+          <?php if ( get_field( 'person-3-name' ) ): ?>
+          <h3 class="team__member__name"><?php the_field( 'person-3-name' ) ?></h3>
+          <?php endif; ?>
+          <?php if ( get_field( 'person-3-profession' ) ): ?>
+          <p class="team__member__role"><?php the_field( 'person-3-profession' ) ?></p>
+          <?php endif; ?>
+          <?php if ( get_field( 'person-3-text' ) ): ?>
+          <p class="team__member__text"><?php the_field( 'person-3-text' ) ?></p>
+          <?php endif; ?>
+          <div class="team__member__contact">
+            <?php if ( get_field( 'person-3-email' ) ): ?>
+            <?php // insert image here! ?>
+            <p class="team__member__contact__email"><?php the_field( 'person-3-email' ) ?></p>
+            <?php endif; ?>
+
+            <?php if ( get_field( 'person-3-phone' ) ): ?>
+            <?php // insert phone picture here ?>
+            <p class="team__member__contact__phone"><?php the_field( 'person-3-phone' ) ?></p>
+            <?php endif; ?>
           </div>
         </div>
       </div>

@@ -4,7 +4,7 @@
   @include outer-container;
 
   // Component styles
-  padding: calc(2 * #{$padding});
+  padding: calc(2 * #{$padding}) calc(2 * #{$padding}) 0 calc(2 * #{$padding});
   margin: $margin auto;
 
   // Component responsive queries
