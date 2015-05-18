@@ -40,17 +40,17 @@ html, body {
 
 .container--dark-gradient {
   @extend .container;
-  @include linear-gradient(#1D2A3E, rgba(170,203,209,1));
+  @include linear-gradient(rgb(13, 38, 60), rgb(170,203,209));
 }
 
 .container--beige-gradient {
   @extend .container;
-  @include linear-gradient(rgb(216, 211, 190), rgb(229, 227, 215));
+  @include linear-gradient(rgb(213, 205, 177), rgb(231, 227, 215));
 }
 
 .container--blue-gradient {
   @extend .container;
-  @include linear-gradient(rgb(142, 170, 194), rgb(211, 223, 228));
+  @include linear-gradient(rgb(130, 172, 197), rgb(207, 225, 230));
 
   // Component style
   background-image: url(img/parallax_rock.min.png);
