@@ -63,61 +63,78 @@
 ?>
 <div class="container--beige-gradient">
   <div class="selling-points">
+    <?php $field = get_field( 'selling-point-1' ) ?>
+    <?php if ( $field ): ?>
     <div class="selling-points__point">
       <div class="selling-points__image">
       <?php // Selling point image goes here ?>
       </div>
       <div class="selling-points__content">
-        <h3 class="selling-points__heading">Professionellt</h3>
-        <p class="selling-points__body">Oavsett projektets storlek och art är det självklart för oss att det sköts professionellt. Du som kund ska alltid känna dig hörd och bli bemött med all önskvärd service.</p>
+        <h3 class="selling-points__heading"><?php the_field( 'selling-point-1' ) ?></h3>
+        <p class="selling-points__body"><?php the_field( 'selling-point-1-text' ) ?></p>
       </div>
     </div>
+    <?php endif; ?>
+    <?php $field = get_field( 'selling-point-2' ) ?>
+    <?php if ( $field ): ?>
     <div class="selling-points__point">
       <div class="selling-points__image">
       <?php // Selling point image goes here ?>
       </div>
       <div class="selling-points__content">
-        <h3 class="selling-points__heading">Personligt</h3>
-        <p class="selling-points__body">När man köper in en extern kompetens kan man känna en oro för att den inköpta tjänsten inte ska motsvara förväntningarna och behoven. En inledande, personlig kontakt tar enligt vår erfarenhet udden av den oron. Vi ser att en ärlig och direkt kommunikation är oerhört viktig för att allt ska bli så bra som både ni och vi vill.</p>
+        <h3 class="selling-points__heading"><?php the_field( 'selling-point-2' ) ?></h3>
+        <p class="selling-points__body"><?php the_field( 'selling-point-2-text' ) ?></p>
       </div>
     </div>
+    <?php endif; ?>
+    <?php $field = get_field( 'selling-point-3' ) ?>
+    <?php if ( $field ): ?>
     <div class="selling-points__point">
       <div class="selling-points__image">
       <?php // Selling point image goes here ?>
       </div>
       <div class="selling-points__content">
-        <h3 class="selling-points__heading">Modernt</h3>
-        <p class="selling-points__body">I och med att vi håller oss uppdaterade med de senaste lösningarna kan vi leverera det absolut senaste inom webbteknik och övrigt material. Du kan vara säker på att din webbsida fungerar lika bra på dator, surfplatta och mobil.</p>
+        <h3 class="selling-points__heading"><?php the_field( 'selling-point-3' ) ?></h3>
+        <p class="selling-points__body"><?php the_field( 'selling-point-3-text' ) ?></p>
       </div>
     </div>
+    <?php endif; ?>
+    <?php $field = get_field( 'selling-point-4' ) ?>
+    <?php if ( $field ): ?>
     <div class="selling-points__point">
       <div class="selling-points__image">
       <?php // Selling point image goes here ?>
       </div>
       <div class="selling-points__content">
-        <h3 class="selling-points__heading">Anpassat</h3>
-        <p class="selling-points__body">Som företagare vill man profilera sig. Allt fler inser vikten av att ha väl fungerande tjänster och det är på webben man visar upp sig. Det är inte bara ytan som ska vara snygg utan de bakomliggande funktionerna måste även fungera och det måste vara enkelt för besökaren att använda. Ingen har så dåligt tålamod som den som surfar runt på webben.</p>
+        <h3 class="selling-points__heading"><?php the_field( 'selling-point-4' ) ?></h3>
+        <p class="selling-points__body"><?php the_field( 'selling-point-4-text' ) ?></p>
       </div>
     </div>
+    <?php endif; ?>
+    <?php $field = get_field( 'selling-point-5' ) ?>
+    <?php if ( $field ): ?>
     <div class="selling-points__point">
       <div class="selling-points__image">
       <?php // Selling point image goes here ?>
       </div>
       <div class="selling-points__content">
-        <h3 class="selling-points__heading">Snabbt</h3>
-        <p class="selling-points__body">Om du vill anlita oss för att utföra en tjänst kommer vi snabbt boka in ett möte där vi pratar om uppdragets omfattning. Därefter dröjer det bara ett par dagar innan du har en offert och ett förslag på arbetsprocessen och datum för leverans. Vi svarar alltid snabbt på dina frågor och du kommer aldrig känna dig "övergiven".</p>
+        <h3 class="selling-points__heading"><?php the_field( 'selling-point-5' ) ?></h3>
+        <p class="selling-points__body"><?php the_field( 'selling-point-5-text' ) ?></p>
       </div>
     </div>
+    <?php endif; ?>
+    <?php $field = get_field( 'selling-point-6' ) ?>
+    <?php if ( $field ): ?>
     <div class="selling-points__point">
       <div class="selling-points__image">
       <?php // Selling point image goes here ?>
       </div>
       <div class="selling-points__content">
-        <h3 class="selling-points__heading">Kompetent</h3>
-        <p class="selling-points__body">På LS Entertainment har vi allihop högskolekompetens och mer därtill. Tillsammans besitter vi en oerhört bred och gedigen kompetens. Kompetens som alltid är nära till hands eftersom vi dagligen har tät kontakt med varandra.</p>
+        <h3 class="selling-points__heading"><?php the_field( 'selling-point-6' ) ?></h3>
+        <p class="selling-points__body"><?php the_field( 'selling-point-6-text' ) ?></p>
       </div>
     </div>
-  </div>
+    <?php endif; ?>
 </div>
 
 <?php get_footer(); ?>
