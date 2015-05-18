@@ -32,7 +32,7 @@ var Parallax = (function() {
         });
 
         cloudsFront.css({
-          'transform': 'translate3d(0, ' + (-top / 2).toFixed(2) + 'px, 0)'
+          'transform': 'translate3d(0, ' + (-top / 20).toFixed(2) + 'px, 0)'
         });
 
         cloudsBack.css({
@@ -48,7 +48,7 @@ var Parallax = (function() {
         });
 
         balloon.css({
-          'transform': 'translate3d(0, ' + (- top).toFixed(2) + 'px, 0)'
+          'transform': 'translate3d(0, ' + (- top / 2).toFixed(2) + 'px, 0)'
         });
     };
 })();
