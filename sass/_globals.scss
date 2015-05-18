@@ -27,17 +27,25 @@ html, body {
 
 // Container, will be used as a wrapper on multiple places.
 .container {
-	float: left;
+	// Component styles
+  float: left;
 	width: 100%;
 	height: 100vh;
-	background: rgb(13,41,63); /* Old browsers */
-	background: -moz-linear-gradient(top, rgba(13,41,63,1) 58%, rgba(170,203,209,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(58%,rgba(13,41,63,1)), color-stop(100%,rgba(170,203,209,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, rgba(13,41,63,1) 58%,rgba(170,203,209,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, rgba(13,41,63,1) 58%,rgba(170,203,209,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, rgba(13,41,63,1) 58%,rgba(170,203,209,1) 100%); /* IE10+ */
-	background: linear-gradient(to bottom, rgba(13,41,63,1) 58%,rgba(170,203,209,1) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0d293f', endColorstr='#aacbd1',GradientType=0 ); /* IE6-9 */
+
+  // Component responsive queries
+  @media screen and ( max-width: 960px ) {
+    height: auto;
+  }
+}
+
+.container--dark-gradient {
+  @extend .container;
+  @include linear-gradient(#1D2A3E, rgba(170,203,209,1));
+}
+
+.container--beige-gradient {
+  @extend .container;
+  @include linear-gradient(rgb(216, 211, 190), rgb(229, 227, 215));
 }
 
 // Float classes
@@ -56,4 +64,10 @@ html, body {
 
 .text-right {
 	text-align: right;
+}
+
+// Mixin to reset omega when media queries fires
+@mixin omega-reset($nth) {
+  &:nth-child(#{$nth}) { margin-right: flex-gutter(); }
+  &:nth-child(#{$nth}+1) { clear: none }
 }

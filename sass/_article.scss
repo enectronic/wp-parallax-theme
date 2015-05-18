@@ -51,17 +51,25 @@
   @media screen and( max-width: 960px ) {
     font-size: 3.6vw;
   }
+
+  @media screen and( max-width: 600px ) {
+    font-size: 5.4vw;
+  }
 }
 
-// The red subheading (second heading)
+// The yellow subheading (second heading)
 .article__sub-heading {
 	// Component styles
-  color: $red;
+  color: $yellow;
   font-size: 4vw;
 
   // Component responsive queries
   @media screen and ( max-width: 960px ) {
     font-size: 4.8vw;
+  }
+
+  @media screen and( max-width: 600px ) {
+    font-size: 7.2vw;
   }
 }
 

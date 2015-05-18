@@ -1,0 +1,71 @@
+// The selling-points container
+.selling-points {
+  // Neat grid mixins
+  @include outer-container;
+
+  // Component styles
+  padding: calc(2 * #{$padding});
+  margin: $margin auto;
+
+  // Component media queries
+  @media screen and (max-width: 600px) {
+      padding: $padding;
+  }
+}
+
+// A single selling point
+.selling-points__point {
+  // Neat grid mixins
+  @include span-columns(4);
+  @include omega(3n); // Every third will have no gutter
+
+  // Component styles
+  &:nth-of-type(-n+3) {
+    margin-bottom: $margin;
+  }
+
+  // Responsive queries
+  @media screen and ( max-width: 960px ) {
+    @include omega-reset(3n);
+    @include span-columns(6);
+    @include omega(2n);
+
+    // Component styles
+    &:nth-of-type(-n+4) {
+      margin-bottom: $margin;
+    }
+  }
+
+  @media screen and ( max-width: 660px ) {
+    @include omega-reset(2n);
+    @include span-columns(12);
+
+    // Component styles
+    &:not(:last-of-type) {
+      margin-bottom: $margin;
+    }
+  }
+}
+
+// The selling point image
+.selling-points__image {
+
+}
+
+// Selling points text content wrapper
+.selling-points__content {
+
+}
+
+// Selling point header
+.selling-points__heading {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  margin-bottom: $margin / 3;
+}
+
+// A selling point's body text
+.selling-points__body {
+  line-height: 1.5;
+  color: rgb(60, 79, 104);
+}
