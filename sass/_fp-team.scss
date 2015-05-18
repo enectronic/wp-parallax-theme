@@ -1,0 +1,112 @@
+// The team container
+.team {
+  // Neat grid mixins
+  @include outer-container;
+
+  // Component styles
+  padding: calc(2 * #{$padding});
+  margin: $margin auto;
+
+  // Component responsive queries
+
+  @media screen and (max-width: 600px) {
+      padding: $padding;
+  }
+}
+
+// The team headline
+.team__heading {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 3vw;
+  color: #fff;
+  margin-bottom: $margin / 2;
+}
+
+// The team desciption text
+.team__body {
+  // Neat grid mixins
+  @include span-columns(8);
+  @include shift(2);
+
+  // Component styles
+  line-height: 1.5;
+  margin-bottom: $margin;
+
+  // Component responsive queries
+  @media screen and ( max-width: 740px ) {
+    @include span-columns(12);
+    @include shift(0);
+  }
+}
+
+// Container for all the team members
+.team__members {
+  // Neat grid mixins
+  @include span-columns(12);
+}
+
+// Single team member container
+.team__member {
+  // Neat grid mixins
+  @include span-columns(4);
+  @include omega(3n);
+
+  // 845px break
+  @media screen and ( max-width: 845px ) {
+    @include omega-reset(3n);
+    @include span-columns(12);
+  }
+}
+
+// The team member portrait
+.team__member__image {
+
+}
+
+// The member name text
+.team__member__name {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  margin-bottom: $margin / 4;
+}
+
+// Team members profession
+.team__member__role {
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-bottom: $margin / 4;
+}
+
+// Single team member description
+.team__member__text {
+  line-height: 1.4;
+  font-size: .9rem;
+  margin-bottom: $margin / 2;
+}
+
+// Team member contact container
+.team__member__contact {
+
+}
+
+// A members email address
+.team__member__contact__email {
+  font-size: .9rem;
+  margin-bottom: $margin / 2;
+}
+
+// A members phone number
+.team__member__contact__phone {
+  font-size: 1rem;
+
+  // Component responsive queries
+  @media screen and ( max-width: 960px ) {
+    margin-bottom: 212px; // 423 is the height of the bg-image
+  }
+
+  @media screen and ( max-width: 845px ) {
+    margin-bottom: $margin;
+  }
+}

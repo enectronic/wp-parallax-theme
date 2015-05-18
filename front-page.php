@@ -1,10 +1,9 @@
 <?php get_header(); ?>
 
 <?php
-/*
-	Parallax header effect. Written using CSS BEM architecture
-	for a low specificity.
-*/
+	// Parallax header effect. Written using CSS BEM architecture
+	// for a low specificity.
+  // ===========================================================================
 ?>
 <header class="parallax">
 	<div class="parallax__group">
@@ -41,6 +40,7 @@
 <?php
 	// This is the gradient corporation info below
 	// the parallax effect at the top.
+  // ===========================================================================
 ?>
 <div class="container--dark-gradient">
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -60,6 +60,7 @@
 <?php
   // The following is the light brown/beige selling
   // points layout.
+  // ===========================================================================
 ?>
 <div class="container--beige-gradient">
   <div class="selling-points">
@@ -138,8 +139,62 @@
   </div>
 </div>
 
+<?php
+  // The team view
+  // ===========================================================================
+?>
 <div class="container--blue-gradient">
+  <div class="team">
+    <h2 class="team__heading">Vårt team</h2>
+    <p class="team__body">På LS har vi samarbetat i små personliga grupper sedan 2006 och vi har alla en gemensam strävan efter att hela tiden leverera professionella och ändamålsenliga produkter. Fortsätt en sammanfattande, kärnfull och kort beskrivning som framhåller den lilla gruppen.</p>
+    <div class="team__members">
+      <div class="team__member">
+        <div class="team__member__image">
+          <? // Image will be inserted here ?>
+        </div>
+        <h3 class="team__member__name">Fredrik Saaf</h3>
+        <p class="team__member__role">VD / Back-endutvecklare</p>
+        <p class="team__member__text">Fredrik är vår starke man och den som obevekligt driver oss alla in i det ena mer nervkittlande projektet efter det andra. Totalt orädd och en idéspruta utan dess like. Den här texten ska vara lite rolig och mer personbeskrivande än detaljerad.</p>
+        <div class="team__member__contact">
+          <?php // insert image here! ?>
+          <p class="team__member__contact__email">fredrik.saaf@lsentertainment.se</p>
 
+          <?php // insert phone picture here ?>
+          <p class="team__member__contact__phone">073 614 56 14</p>
+        </div>
+      </div>
+      <div class="team__member">
+        <div class="team__member__image">
+          <? // Image will be inserted here ?>
+        </div>
+        <h3 class="team__member__name">Sara Brandberg</h3>
+        <p class="team__member__role">Webbdesigner / Formgivare</p>
+        <p class="team__member__text">Sara är vår starke man och den som obevekligt driver oss alla in i det ena mer nervkittlande projektet efter det andra. Totalt orädd och en idéspruta utan dess like. Den här texten ska vara lite rolig och mer personbeskrivande än detaljerad.</p>
+        <div class="team__member__contact">
+          <?php // insert image here! ?>
+          <p class="team__member__contact__email">sara.brandberg@lsentertainment.se</p>
+
+          <?php // insert phone picture here ?>
+          <p class="team__member__contact__phone">073 123 45 67</p>
+        </div>
+      </div>
+      <div class="team__member">
+        <div class="team__member__image">
+          <? // Image will be inserted here ?>
+        </div>
+        <h3 class="team__member__name">Johan Ljung</h3>
+        <p class="team__member__role">Front-endutvecklare</p>
+        <p class="team__member__text">Johan är vår starke man och den som obevekligt driver oss alla in i det ena mer nervkittlande projektet efter det andra. Totalt orädd och en idéspruta utan dess like. Den här texten ska vara lite rolig och mer personbeskrivande än detaljerad.</p>
+        <div class="team__member__contact">
+          <?php // insert image here! ?>
+          <p class="team__member__contact__email">johan.ljung@lsentertainment.se</p>
+
+          <?php // insert phone picture here ?>
+          <p class="team__member__contact__phone">072 205 89 37</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <?php get_footer('front-page'); ?>
