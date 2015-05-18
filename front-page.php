@@ -135,6 +135,11 @@
       </div>
     </div>
     <?php endif; ?>
+  </div>
 </div>
 
-<?php get_footer(); ?>
+<div class="container--blue-gradient">
+
+</div>
+
+<?php get_footer('front-page'); ?>

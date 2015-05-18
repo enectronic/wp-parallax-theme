@@ -48,6 +48,11 @@ html, body {
   @include linear-gradient(rgb(216, 211, 190), rgb(229, 227, 215));
 }
 
+.container--blue-gradient {
+  @extend .container;
+  @include linear-gradient(rgb(142, 170, 194), rgb(211, 223, 228));
+}
+
 // Float classes
 .pull-left {
 	float: left;
