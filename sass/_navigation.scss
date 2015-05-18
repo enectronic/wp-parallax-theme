@@ -1,0 +1,30 @@
+.navigation {
+	/* The nav container */
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 50%;
+}
+
+.navigation__options {
+	/* The ul */
+	
+}
+
+.navigation__item {
+	/* The li */
+	height: 50px;
+	
+	a {
+		display: inline-block;
+		width: 25%;
+		text-align: center;
+		height: 100%;
+		padding-top: 15px;
+	}
+}
+
+.current-menu-item {
+	/* Wordpress own active class,
+	   it is set on the li element */
+}
