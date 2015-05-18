@@ -1,4 +1,6 @@
+// The parallax container
 .parallax {
+  // Component styles
 	z-index: -1;
 	float: left;
 	position: relative;
@@ -14,16 +16,21 @@
 	background: -ms-linear-gradient(top, rgba(46,88,122,1) 0%,rgba(165,221,234,1) 100%);
 	background: linear-gradient(to bottom, rgba(46,88,122,1) 0%,rgba(165,221,234,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e587a', endColorstr='#a5ddea',GradientType=0 );
-	@media screen and (max-width: 960px) {
+
+  // Component responsive queries
+  @media screen and (max-width: 960px) {
     min-height: 50vh;
 	}
 }
 
+// Every component inside the parallax parent
+// should have this class.
 .parallax__layer {
 	position: absolute;
 	max-width: 100%;
 }
 
+// Specific parallax components
 .parallax__layer--rocks {
 	position: absolute;
 	bottom: 0;
@@ -31,18 +38,24 @@
 }
 
 .parallax__layer--climber {
+  // Component styles
 	transform: translateY(-10%);
+
+  // Component responsive queries.
 	@media screen and (max-width: 640px) {
     display: none;
 	}
 }
 
 .parallax__layer--balloon {
+  // Component styles.
 	top: 0;
 	right: 5%;
 	top: 20%;
 	width: 250px;
 	transform: translateY(-100%);
+
+  // Component responsive queries.
 	@media screen and (max-width: 960px) {
     display: none;
 	}
@@ -61,13 +74,17 @@
 }
 
 .parallax__layer--logo {
+  // Component styles
 	top: 25%;
 	left: 50%;
 	transform: translate3d(-50%, -50%, 0);
 	width: 350px;
+
+  // Component responsive queries
 	@media screen and (max-width: 960px) {
     width: 200px;
 	}
+
 	@media screen and (max-width: 400px) {
     width: 150px;
 	}

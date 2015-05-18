@@ -38,4 +38,4 @@ $RECYCLE.BIN/
 bower_components/
 .tmp
 dist
-/src/main.js
+css/
