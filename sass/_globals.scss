@@ -38,6 +38,7 @@ html, body {
   }
 }
 
+// Container variations.
 .container--dark-gradient {
   @extend .container;
   @include linear-gradient(rgb(13, 38, 60), rgb(170,203,209));
