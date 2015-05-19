@@ -68,7 +68,7 @@
     <?php if ( $field ): ?>
     <div class="selling-points__point">
       <div class="selling-points__image">
-      <?php // Selling point image goes here ?>
+        <img src="<?php bloginfo('template_directory'); ?>/img/sp-professional.png" />
       </div>
       <div class="selling-points__content">
         <h3 class="selling-points__heading"><?php the_field( 'selling-point-1' ) ?></h3>
@@ -80,7 +80,7 @@
     <?php if ( $field ): ?>
     <div class="selling-points__point">
       <div class="selling-points__image">
-      <?php // Selling point image goes here ?>
+        <img src="<?php bloginfo('template_directory'); ?>/img/sp-personal.png" />
       </div>
       <div class="selling-points__content">
         <h3 class="selling-points__heading"><?php the_field( 'selling-point-2' ) ?></h3>
@@ -92,7 +92,7 @@
     <?php if ( $field ): ?>
     <div class="selling-points__point">
       <div class="selling-points__image">
-      <?php // Selling point image goes here ?>
+        <img src="<?php bloginfo('template_directory'); ?>/img/sp-modern.png" />
       </div>
       <div class="selling-points__content">
         <h3 class="selling-points__heading"><?php the_field( 'selling-point-3' ) ?></h3>
@@ -104,7 +104,7 @@
     <?php if ( $field ): ?>
     <div class="selling-points__point">
       <div class="selling-points__image">
-      <?php // Selling point image goes here ?>
+        <img src="<?php bloginfo('template_directory'); ?>/img/sp-customized.png" />
       </div>
       <div class="selling-points__content">
         <h3 class="selling-points__heading"><?php the_field( 'selling-point-4' ) ?></h3>
@@ -116,7 +116,7 @@
     <?php if ( $field ): ?>
     <div class="selling-points__point">
       <div class="selling-points__image">
-      <?php // Selling point image goes here ?>
+        <img src="<?php bloginfo('template_directory'); ?>/img/sp-fast.png" />
       </div>
       <div class="selling-points__content">
         <h3 class="selling-points__heading"><?php the_field( 'selling-point-5' ) ?></h3>
@@ -128,7 +128,7 @@
     <?php if ( $field ): ?>
     <div class="selling-points__point">
       <div class="selling-points__image">
-      <?php // Selling point image goes here ?>
+        <img src="<?php bloginfo('template_directory'); ?>/img/sp-competent.png" />
       </div>
       <div class="selling-points__content">
         <h3 class="selling-points__heading"><?php the_field( 'selling-point-6' ) ?></h3>
@@ -168,12 +168,12 @@
           <?php endif; ?>
           <div class="team__member__contact">
             <?php if ( get_field( 'person-1-email' ) ): ?>
-            <?php // insert image here! ?>
+            <img class="team__member__email__img" src="<?php bloginfo('template_directory'); ?>/img/contact-mail.png" />
             <p class="team__member__contact__email"><?php the_field( 'person-1-email' ) ?></p>
             <?php endif; ?>
 
             <?php if ( get_field( 'person-1-phone' ) ): ?>
-            <?php // insert phone picture here ?>
+            <img class="team__member__phone__img" src="<?php bloginfo('template_directory'); ?>/img/contact-phone.png" />
             <p class="team__member__contact__phone"><?php the_field( 'person-1-phone' ) ?></p>
             <?php endif; ?>
           </div>
@@ -195,12 +195,12 @@
           <?php endif; ?>
           <div class="team__member__contact">
             <?php if ( get_field( 'person-2-email' ) ): ?>
-            <?php // insert image here! ?>
+            <img class="team__member__email__img" src="<?php bloginfo('template_directory'); ?>/img/contact-mail.png" />
             <p class="team__member__contact__email"><?php the_field( 'person-2-email' ) ?></p>
             <?php endif; ?>
 
             <?php if ( get_field( 'person-2-phone' ) ): ?>
-            <?php // insert phone picture here ?>
+            <img class="team__member__phone__img" src="<?php bloginfo('template_directory'); ?>/img/contact-phone.png" />
             <p class="team__member__contact__phone"><?php the_field( 'person-2-phone' ) ?></p>
             <?php endif; ?>
           </div>
@@ -222,12 +222,12 @@
           <?php endif; ?>
           <div class="team__member__contact">
             <?php if ( get_field( 'person-3-email' ) ): ?>
-            <?php // insert image here! ?>
+            <img class="team__member__email__img" src="<?php bloginfo('template_directory'); ?>/img/contact-mail.png" />
             <p class="team__member__contact__email"><?php the_field( 'person-3-email' ) ?></p>
             <?php endif; ?>
 
             <?php if ( get_field( 'person-3-phone' ) ): ?>
-            <?php // insert phone picture here ?>
+            <img class="team__member__phone__img" src="<?php bloginfo('template_directory'); ?>/img/contact-phone.png" />
             <p class="team__member__contact__phone"><?php the_field( 'person-3-phone' ) ?></p>
             <?php endif; ?>
           </div>

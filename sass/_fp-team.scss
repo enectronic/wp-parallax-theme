@@ -141,6 +141,14 @@
 
 }
 
+.team__member__phone__img,
+.team__member__email__img {
+  // Component responsive queries
+  @media screen and ( max-width: 800px ) {
+    display: none;
+  }
+}
+
 // A members email address
 .team__member__contact__email {
   font-size: .9rem;

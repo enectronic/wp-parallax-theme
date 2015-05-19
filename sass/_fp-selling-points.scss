@@ -49,12 +49,28 @@
 
 // The selling point image
 .selling-points__image {
+  margin-bottom: $margin / 3;
 
+  // Component responsive queries
+  @media screen and ( max-width: 660px ) {
+    @include span-columns(2);
+  }
+
+  @media screen and ( max-width: 520px ) {
+    display: none;
+  }
 }
 
 // Selling points text content wrapper
 .selling-points__content {
+  // Component responsive queries
+  @media screen and ( max-width: 660px ) {
+    @include span-columns(10);
+  }
 
+  @media screen and ( max-width: 520px ) {
+    @include span-columns(12);
+  }
 }
 
 // Selling point header
@@ -68,4 +84,9 @@
 .selling-points__body {
   line-height: 1.5;
   color: rgb(60, 79, 104);
+
+  // Component responsive queries
+  @media screen and ( max-width: 660px ) {
+    @include span-columns(12);
+  }
 }
