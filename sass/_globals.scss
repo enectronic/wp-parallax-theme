@@ -52,6 +52,8 @@ html, body {
 .container--blue-gradient {
   @extend .container;
   @include linear-gradient(rgb(130, 172, 197), rgb(207, 225, 230));
+
+  height: auto;
 }
 
 // Float classes
