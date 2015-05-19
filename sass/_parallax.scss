@@ -39,7 +39,7 @@
 
 .parallax__layer--climber {
   // Component styles
-	//transform: translateY(-10%);
+  will-change: transform;
 
   // Component responsive queries.
 	@media screen and (max-width: 640px) {
@@ -53,7 +53,7 @@
 	right: 5%;
 	top: 20%;
 	width: 250px;
-	//transform: translateY(-100%);
+  will-change: transform;
 
   // Component responsive queries.
 	@media screen and (max-width: 960px) {
@@ -65,12 +65,14 @@
 	left: 25%;
 	top: 5%;
 	width: 50%;
+  will-change: transform;
 }
 
 .parallax__layer--clouds-back {
 	top: 20%;
 	left: 15%;
-	width: 75%
+	width: 75%;
+  will-change: transform;
 }
 
 .parallax__layer--logo {
@@ -79,6 +81,7 @@
 	left: 50%;
 	transform: translate3d(-50%, 0, 0);
 	width: 350px;
+  will-change: transform;
 
   // Component responsive queries
 	@media screen and (max-width: 960px) {
@@ -94,7 +97,7 @@
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	//transform: translateY(50%);
+  will-change: transform;
 }
 
 .parallax__layer--back {
@@ -102,6 +105,7 @@
 	right: 0;
 	top: 0;
 	bottom: 0;
+  will-change: transform;
 }
 
 .parallax__layer__image {

@@ -48,6 +48,10 @@
   font-size: 3vw;
 
   // Component responsive queries.
+  @media screen and( min-width: 1880px ) {
+    font-size: 56px;
+  }
+
   @media screen and( max-width: 960px ) {
     font-size: 3.6vw;
   }
@@ -64,6 +68,10 @@
   font-size: 4vw;
 
   // Component responsive queries
+  @media screen and( min-width: 1880px ) {
+    font-size: 74px;
+  }
+
   @media screen and ( max-width: 960px ) {
     font-size: 4.8vw;
   }

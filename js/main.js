@@ -29,7 +29,7 @@ var Parallax = (function() {
     // Interval because onscroll fires more randomly.
     var startInterval = function() {
       if ( userScrollTopReference < windowHeight && !intervalRunning ) {
-        parallaxScrollInterval = setInterval(function() { updatePage(); }, 17);
+        parallaxScrollInterval = setInterval(function() { updatePage(); }, 7);
         intervalRunning = true;
       }
     };
@@ -66,26 +66,32 @@ var Parallax = (function() {
 
       // The transforms needed for the parallax scrolling effect.
       logo.css({
+        '-webkit-transform': 'translate3d(-50%, ' + (userScrollTop / 2).toFixed(2) + 'px, 0)',
         'transform': 'translate3d(-50%, ' + (userScrollTop / 2).toFixed(2) + 'px, 0)'
       });
 
       cloudsFront.css({
+        '-webkit-transform': 'translate3d(0, ' + (-userScrollTop / 20).toFixed(2) + 'px, 0)',
         'transform': 'translate3d(0, ' + (-userScrollTop / 20).toFixed(2) + 'px, 0)'
       });
 
       cloudsBack.css({
+        '-webkit-transform': 'translate3d(0, ' + (userScrollTop / 5).toFixed(2) + 'px, 0)',
         'transform': 'translate3d(0, ' + (userScrollTop / 5).toFixed(2) + 'px, 0)'
       });
 
       climber.css({
+        '-webkit-transform': 'translate3d(0, ' + (-userScrollTop / 8).toFixed(2) + 'px, 0)',
         'transform': 'translate3d(0, ' + (-userScrollTop / 8).toFixed(2) + 'px, 0)'
       });
 
       water.css({
+        '-webkit-transform': 'translate3d(0, ' + (userScrollTop / 2.5).toFixed(2) + 'px, 0)',
         'transform': 'translate3d(0, ' + (userScrollTop / 2.5).toFixed(2) + 'px, 0)'
       });
 
       balloon.css({
+        '-webkit-transform': 'translate3d(0, ' + (- userScrollTop / 2).toFixed(2) + 'px, 0)',
         'transform': 'translate3d(0, ' + (- userScrollTop / 2).toFixed(2) + 'px, 0)'
       });
     };

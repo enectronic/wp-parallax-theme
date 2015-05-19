@@ -1,6 +1,6 @@
 .navigation {
 	/* The nav container */
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 50%;
 	width: 50%;
@@ -8,19 +8,24 @@
 
 .navigation__options {
 	/* The ul */
-	
+  float: left;
+  width: 100%;
 }
 
 .navigation__item {
 	/* The li */
+  float: left;
+  width: 25%;
 	height: 50px;
-	
+  display: table;
+
 	a {
-		display: inline-block;
-		width: 25%;
+    display: table-cell;
+    text-transform: uppercase;
+    vertical-align: middle;
+		width: 100%;
 		text-align: center;
 		height: 100%;
-		padding-top: 15px;
 	}
 }
 

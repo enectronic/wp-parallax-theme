@@ -61,6 +61,14 @@
   }
 }
 
+// Team background image
+.selling-points__background__image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-width: 35%;
+}
+
 // Selling points text content wrapper
 .selling-points__content {
   // Component responsive queries

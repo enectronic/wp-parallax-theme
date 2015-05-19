@@ -63,6 +63,8 @@
   // ===========================================================================
 ?>
 <div class="container--beige-gradient">
+  <?php /* this image is positioned absolute as a bg-image */ ?>
+  <img class="selling-points__background__image" src="<?php bloginfo('template_directory'); ?>/img/town-top.png" />
   <div class="selling-points">
     <?php $field = get_field( 'selling-point-1' ) ?>
     <?php if ( $field ): ?>
@@ -144,6 +146,8 @@
   // ===========================================================================
 ?>
 <div class="container--blue-gradient">
+  <?php /* this image is positioned absolute as a bg-image */ ?>
+  <img class="team__background__image" src="<?php bloginfo('template_directory'); ?>/img/town-bottom.png" />
   <div class="team">
     <?php if ( get_field( 'team-headline' ) ): ?>
     <h2 class="team__heading"><?php the_field( 'team-headline' ) ?></h2>

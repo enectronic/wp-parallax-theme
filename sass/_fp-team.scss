@@ -13,6 +13,14 @@
   }
 }
 
+// Team background image
+.team__background__image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 35%;
+}
+
 // The team headline
 .team__heading {
   text-transform: uppercase;

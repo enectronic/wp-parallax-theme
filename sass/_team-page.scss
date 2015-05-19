@@ -1,0 +1,139 @@
+.team-top-bar {
+  @include linear-gradient(rgb(47, 79, 105), rgb(132, 171, 184));
+
+  float: left;
+  background: rgb(47, 79, 105);
+  background-image: url(img/parallax_rock.min.png); /* fallback */
+  background-image: url(img/parallax_rock.min.png), -webkit-gradient(linear, left top, left bottom, from(rgb(47, 79, 105)), to(rgb(132, 171, 184))); /* Saf4+, Chrome */
+  background-image: url(img/parallax_rock.min.png), -webkit-linear-gradient(top, rgb(47, 79, 105), rgb(132, 171, 184)); /* Chrome 10+, Saf5.1+ */
+  background-image: url(img/parallax_rock.min.png),    -moz-linear-gradient(top, rgb(47, 79, 105), rgb(132, 171, 184)); /* FF3.6+ */
+  background-image: url(img/parallax_rock.min.png),      -o-linear-gradient(top, rgb(47, 79, 105), rgb(132, 171, 184)); /* Opera 11.10+ */
+  background-image: url(img/parallax_rock.min.png),         linear-gradient(to bottom, rgb(47, 79, 105), rgb(132, 171, 184)); /* W3C */
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100%;
+
+  float: left;
+  width: 100%;
+  height: 165px;
+  padding: $padding;
+}
+
+.team-top-bar__logo {
+
+}
+
+// The full members container
+.members__container {
+  // Bourbon mixin
+  @include linear-gradient(rgb(13, 38, 60), #A6DDE9);
+
+  // Component styles
+  padding: calc(2 * #{$padding});
+  float: left;
+  width: 100%;
+}
+
+// Single member wrapper
+.member {
+  // Neat grid mixins
+  @include outer-container;
+
+  // Component styles
+  margin-top: 2 * $margin;
+}
+
+.member__name {
+  color: #fff;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.member__profession {
+  color: #fff;
+  font-size: 1.2rem;
+  margin: $margin/3 0;
+}
+
+// First column
+.member__image {
+  @include span-columns(4);
+}
+
+// Member info text
+.member__text {
+  // Neat grid mixins
+  @include span-columns(4);
+
+  color: #fff;
+  font-size: .8rem;
+  line-height: 1.5;
+}
+
+// Member skill list
+.member__skills {
+  @include span-columns(4);
+  @include omega();
+}
+
+// White divider between member info and portfolio
+.member__divider {
+  @include span-columns(12);
+  margin: 2*$margin 0;
+  height: 2px;
+  background: #fff;
+}
+
+// Member portfolio wrapper
+.member__portfolio {
+
+}
+
+.member__portfolio__first {
+  // Neat grid mixins
+  @include span-columns(4);
+}
+
+.member__portfolio__second {
+  // Neat grid mixins
+  @include span-columns(4);
+}
+
+.member__portfolio__third {
+  // Neat grid mixins
+  @include span-columns(4);
+}
+
+// Portfolio "type-of" heading
+.member__portfolio__heading {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+// Portfolio "type-of" description
+.member__portfolio__description {
+  color: #fff;
+  font-size: .8rem;
+  margin-bottom: 2*$margin;
+}
+
+// Portfolio item wrapper
+.member__portfolio__item {
+  background: rgba(13, 38, 60, .6);
+  padding: $padding / 4;
+}
+
+// The portfolio item heading
+.member__portfolio__item__heading {
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: $margin/5;
+}
+
+// The portfolio item description
+.member__portfolio__item__text {
+  color: #fff;
+  font-size: .8rem;
+  line-height: 1.3;
+}

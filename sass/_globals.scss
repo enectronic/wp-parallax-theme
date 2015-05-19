@@ -62,12 +62,16 @@ html, body {
 .container--beige-gradient {
   @extend .container;
   @include linear-gradient(rgb(213, 205, 177), rgb(231, 227, 215));
+
+  position: relative;
+  height: auto;
 }
 
 .container--blue-gradient {
   @extend .container;
   @include linear-gradient(rgb(130, 172, 197), rgb(207, 225, 230));
 
+  position: relative;
   height: auto;
 }
 
