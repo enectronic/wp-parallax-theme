@@ -62,82 +62,28 @@
   // points layout.
   // ===========================================================================
 ?>
+<?php $sellingPoints = 6; $i = 1; ?>
+
 <div class="container--beige-gradient">
   <?php /* this image is positioned absolute as a bg-image */ ?>
   <img class="selling-points__background__image" src="<?php bloginfo('template_directory'); ?>/img/town-top.png" />
   <div class="selling-points">
-    <?php $field = get_field( 'selling-point-1' ) ?>
-    <?php if ( $field ): ?>
+    <?php
+      // Iterate over the selling points
+    ?>
+    <?php while ( $i <= $sellingPoints ): ?>
+    <?php if ( get_field( 'selling-point-'. $i ) ): ?>
     <div class="selling-points__point">
       <div class="selling-points__image">
-        <img src="<?php bloginfo('template_directory'); ?>/img/sp-professional.png" />
+        <img src="<?php the_field( 'image-selling-point-'. $i ) ?>" />
       </div>
       <div class="selling-points__content">
-        <h3 class="selling-points__heading"><?php the_field( 'selling-point-1' ) ?></h3>
-        <p class="selling-points__body"><?php the_field( 'selling-point-1-text' ) ?></p>
+        <h3 class="selling-points__heading"><?php the_field( 'selling-point-'. $i ) ?></h3>
+        <p class="selling-points__body"><?php the_field( 'selling-point-'. $i .'-text' ) ?></p>
       </div>
     </div>
     <?php endif; ?>
-    <?php $field = get_field( 'selling-point-2' ) ?>
-    <?php if ( $field ): ?>
-    <div class="selling-points__point">
-      <div class="selling-points__image">
-        <img src="<?php bloginfo('template_directory'); ?>/img/sp-personal.png" />
-      </div>
-      <div class="selling-points__content">
-        <h3 class="selling-points__heading"><?php the_field( 'selling-point-2' ) ?></h3>
-        <p class="selling-points__body"><?php the_field( 'selling-point-2-text' ) ?></p>
-      </div>
-    </div>
-    <?php endif; ?>
-    <?php $field = get_field( 'selling-point-3' ) ?>
-    <?php if ( $field ): ?>
-    <div class="selling-points__point">
-      <div class="selling-points__image">
-        <img src="<?php bloginfo('template_directory'); ?>/img/sp-modern.png" />
-      </div>
-      <div class="selling-points__content">
-        <h3 class="selling-points__heading"><?php the_field( 'selling-point-3' ) ?></h3>
-        <p class="selling-points__body"><?php the_field( 'selling-point-3-text' ) ?></p>
-      </div>
-    </div>
-    <?php endif; ?>
-    <?php $field = get_field( 'selling-point-4' ) ?>
-    <?php if ( $field ): ?>
-    <div class="selling-points__point">
-      <div class="selling-points__image">
-        <img src="<?php bloginfo('template_directory'); ?>/img/sp-customized.png" />
-      </div>
-      <div class="selling-points__content">
-        <h3 class="selling-points__heading"><?php the_field( 'selling-point-4' ) ?></h3>
-        <p class="selling-points__body"><?php the_field( 'selling-point-4-text' ) ?></p>
-      </div>
-    </div>
-    <?php endif; ?>
-    <?php $field = get_field( 'selling-point-5' ) ?>
-    <?php if ( $field ): ?>
-    <div class="selling-points__point">
-      <div class="selling-points__image">
-        <img src="<?php bloginfo('template_directory'); ?>/img/sp-fast.png" />
-      </div>
-      <div class="selling-points__content">
-        <h3 class="selling-points__heading"><?php the_field( 'selling-point-5' ) ?></h3>
-        <p class="selling-points__body"><?php the_field( 'selling-point-5-text' ) ?></p>
-      </div>
-    </div>
-    <?php endif; ?>
-    <?php $field = get_field( 'selling-point-6' ) ?>
-    <?php if ( $field ): ?>
-    <div class="selling-points__point">
-      <div class="selling-points__image">
-        <img src="<?php bloginfo('template_directory'); ?>/img/sp-competent.png" />
-      </div>
-      <div class="selling-points__content">
-        <h3 class="selling-points__heading"><?php the_field( 'selling-point-6' ) ?></h3>
-        <p class="selling-points__body"><?php the_field( 'selling-point-6-text' ) ?></p>
-      </div>
-    </div>
-    <?php endif; ?>
+    <?php $i++; endwhile; ?>
   </div>
 </div>
 
@@ -156,87 +102,41 @@
     <p class="team__body"><?php the_field( 'team-body-text' ) ?></p>
     <?php endif; ?>
     <div class="team__members">
+      <?php
+        // Iterate over the team members
+      ?>
+      <?php $teamMembers = 3; $i = 1 ?>
+      <?php while ( $i <= $teamMembers ): ?>
       <div class="team__member">
         <div class="team__member__image__container">
-          <img class="team__member__image" src="<?php bloginfo('template_directory'); ?>/img/parallax_balloon.min.png" />
+          <?php if ( get_field( 'person-'. $i . '-picture' ) ): ?>
+          <img class="team__member__image" src="<?php the_field( 'person-'. $i .'-picture' ) ?>" />
+          <?php endif; ?>
         </div>
         <div class="team__member__info">
-          <?php if ( get_field( 'person-1-name' ) ): ?>
-          <h3 class="team__member__name"><?php the_field( 'person-1-name' ) ?></h3>
+          <?php if ( get_field( 'person-'. $i .'-name' ) ): ?>
+          <h3 class="team__member__name"><?php the_field( 'person-'. $i .'-name' ) ?></h3>
           <?php endif; ?>
-          <?php if ( get_field( 'person-1-profession' ) ): ?>
-          <p class="team__member__role"><?php the_field( 'person-1-profession' ) ?></p>
+          <?php if ( get_field( 'person-'. $i .'-profession' ) ): ?>
+          <p class="team__member__role"><?php the_field( 'person-'. $i .'-profession' ) ?></p>
           <?php endif; ?>
-          <?php if ( get_field( 'person-1-text' ) ): ?>
-          <p class="team__member__text"><?php the_field( 'person-1-text' ) ?></p>
+          <?php if ( get_field( 'person-'. $i .'-text' ) ): ?>
+          <p class="team__member__text"><?php the_field( 'person-'. $i .'-text' ) ?></p>
           <?php endif; ?>
           <div class="team__member__contact">
-            <?php if ( get_field( 'person-1-email' ) ): ?>
+            <?php if ( get_field( 'person-'. $i .'-email' ) ): ?>
             <img class="team__member__email__img" src="<?php bloginfo('template_directory'); ?>/img/contact-mail.png" />
-            <p class="team__member__contact__email"><?php the_field( 'person-1-email' ) ?></p>
+            <p class="team__member__contact__email"><?php the_field( 'person-'. $i .'-email' ) ?></p>
             <?php endif; ?>
 
-            <?php if ( get_field( 'person-1-phone' ) ): ?>
+            <?php if ( get_field( 'person-'. $i .'-phone' ) ): ?>
             <img class="team__member__phone__img" src="<?php bloginfo('template_directory'); ?>/img/contact-phone.png" />
-            <p class="team__member__contact__phone"><?php the_field( 'person-1-phone' ) ?></p>
+            <p class="team__member__contact__phone"><?php the_field( 'person-'. $i .'-phone' ) ?></p>
             <?php endif; ?>
           </div>
         </div>
       </div>
-      <div class="team__member">
-        <div class="team__member__image__container">
-          <img class="team__member__image" src="<?php bloginfo('template_directory'); ?>/img/parallax_balloon.min.png" />
-        </div>
-        <div class="team__member__info">
-          <?php if ( get_field( 'person-2-name' ) ): ?>
-          <h3 class="team__member__name"><?php the_field( 'person-2-name' ) ?></h3>
-          <?php endif; ?>
-          <?php if ( get_field( 'person-2-profession' ) ): ?>
-          <p class="team__member__role"><?php the_field( 'person-2-profession' ) ?></p>
-          <?php endif; ?>
-          <?php if ( get_field( 'person-2-text' ) ): ?>
-          <p class="team__member__text"><?php the_field( 'person-2-text' ) ?></p>
-          <?php endif; ?>
-          <div class="team__member__contact">
-            <?php if ( get_field( 'person-2-email' ) ): ?>
-            <img class="team__member__email__img" src="<?php bloginfo('template_directory'); ?>/img/contact-mail.png" />
-            <p class="team__member__contact__email"><?php the_field( 'person-2-email' ) ?></p>
-            <?php endif; ?>
-
-            <?php if ( get_field( 'person-2-phone' ) ): ?>
-            <img class="team__member__phone__img" src="<?php bloginfo('template_directory'); ?>/img/contact-phone.png" />
-            <p class="team__member__contact__phone"><?php the_field( 'person-2-phone' ) ?></p>
-            <?php endif; ?>
-          </div>
-        </div>
-      </div>
-      <div class="team__member">
-        <div class="team__member__image__container">
-          <img class="team__member__image" src="<?php bloginfo('template_directory'); ?>/img/parallax_balloon.min.png" />
-        </div>
-        <div class="team__member__info">
-          <?php if ( get_field( 'person-3-name' ) ): ?>
-          <h3 class="team__member__name"><?php the_field( 'person-3-name' ) ?></h3>
-          <?php endif; ?>
-          <?php if ( get_field( 'person-3-profession' ) ): ?>
-          <p class="team__member__role"><?php the_field( 'person-3-profession' ) ?></p>
-          <?php endif; ?>
-          <?php if ( get_field( 'person-3-text' ) ): ?>
-          <p class="team__member__text"><?php the_field( 'person-3-text' ) ?></p>
-          <?php endif; ?>
-          <div class="team__member__contact">
-            <?php if ( get_field( 'person-3-email' ) ): ?>
-            <img class="team__member__email__img" src="<?php bloginfo('template_directory'); ?>/img/contact-mail.png" />
-            <p class="team__member__contact__email"><?php the_field( 'person-3-email' ) ?></p>
-            <?php endif; ?>
-
-            <?php if ( get_field( 'person-3-phone' ) ): ?>
-            <img class="team__member__phone__img" src="<?php bloginfo('template_directory'); ?>/img/contact-phone.png" />
-            <p class="team__member__contact__phone"><?php the_field( 'person-3-phone' ) ?></p>
-            <?php endif; ?>
-          </div>
-        </div>
-      </div>
+      <?php $i++; endwhile; ?>
     </div>
   </div>
 </div>

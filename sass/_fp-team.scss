@@ -87,14 +87,6 @@
   @media screen and ( max-width: 845px ) {
     @include span-columns(8);
   }
-
-  @media screen and ( max-width: 440px ) {
-    // Vertically align to match image on the left
-    transform: translateY(-50%);
-    top: 50%;
-    position: absolute;
-    right: 0;
-  }
 }
 
 // The team member portrait container
@@ -102,6 +94,10 @@
   // Neat grid mixins
   @include span-columns(12);
 
+  // Component styles
+  margin-bottom: $margin / 4;
+
+  // Media queries
   @media screen and ( max-width: 845px ) {
     @include span-columns(4);
     border-radius: 50%;
