@@ -17,6 +17,10 @@
   width: 100%;
   height: 250px;
   padding: $padding;
+
+  @media screen and ( max-width: 440px ) {
+    padding: $padding / 2;
+  }
 }
 
 .team-top-bar__logo {
@@ -43,6 +47,10 @@
   background-image: url(img/world_map.png),      -o-linear-gradient(top, rgb(13, 38, 60), #A6DDE9); /* Opera 11.10+ */
   background-image: url(img/world_map.png),         linear-gradient(to bottom, rgb(13, 38, 60), #A6DDE9); /* W3C */
   background-size: 100%;
+
+  @media screen and ( max-width: 440px ) {
+    padding: $padding;
+  }
 }
 
 // Single member wrapper
@@ -59,6 +67,10 @@
   color: #fff;
   font-size: 3rem;
   text-transform: uppercase;
+
+  @media screen and ( max-width: 440px ) {
+    font-size: 2.5rem;
+  }
 }
 
 .member__profession {
@@ -210,6 +222,10 @@
   @media screen and ( max-width: 815px ) {
     @include span-columns(6);
   }
+
+  @media screen and ( max-width: 700px ) {
+    @include span-columns(12);
+  }
 }
 
 .member__portfolio__third {
@@ -220,26 +236,15 @@
   @media screen and ( max-width: 815px ) {
     @include span-columns(6);
   }
+
+  @media screen and ( max-width: 700px ) {
+    @include span-columns(12);
+  }
 }
 
 .member__portfolio__items {
   float: left;
   margin-top: 2*$margin;
-}
-
-.member__portfolio__item--first {
-  // Neat grid mixins
-  @include span-columns(4);
-}
-
-.member__portfolio__item--second {
-  // Neat grid mixins
-  @include span-columns(4);
-}
-
-.member__portfolio__item--third {
-  // Neat grid mixins
-  @include span-columns(4);
 }
 
 // Portfolio "type-of" heading
@@ -256,13 +261,40 @@
   color: #fff;
   font-size: .8rem;
   line-height: 1.3;
-  margin-bottom: $margin;
+  height: 100px;
+
+  @media screen and ( max-width: 815px ) {
+    height: 70px;
+  }
+
+  @media screen and ( max-width: 815px ) {
+    height: auto;
+    margin-bottom: $margin/2;
+  }
 }
 
 // Portfolio item wrapper
 .member__portfolio__item {
   background: rgba(13, 38, 60, .6);
   padding: $padding / 4;
+}
+
+.member__portfolio__item--first {
+  @media screen and ( max-width: 815px ) {
+    margin-bottom: $margin;
+  }
+
+  @media screen and ( max-width: 700px ) {
+    margin-top: 0;
+    margin-bottom: $margin;
+  }
+}
+
+.member__portfolio__item--second,
+.member__portfolio__item--third {
+  @media screen and ( max-width: 700px ) {
+    margin-bottom: $margin;
+  }
 }
 
 // The portfolio item heading

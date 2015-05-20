@@ -51,33 +51,33 @@ Template Name: Team Layout Page
       <div class="member__portfolio__first">
         <h3 class="member__portfolio__heading">UX/Webdesign</h3>
         <p class="member__portfolio__description">Vi gör din webbsida från grunden eller hjälper dig med betalningslösningar m.m.</p>
+        <div class="member__portfolio__item member__portfolio__item--first">
+          <!-- image -->
+          <h5 class="member__portfolio__item__heading">Salong Citron</h5>
+          <p class="member__portfolio__item__text">Salong Citron ville ha en ny grafisk profil med tillhörande webbsida. Fokus har legat på enkelhet och tydlighet. Det har även varit viktigt för kunden att det ska finnas ett tydligt formspråk och att kunderna lätt ska kunna navigera bland behandlingar samt boka behandling online</p>
+        </div>
       </div>
       <div class="member__portfolio__second">
         <h3 class="member__portfolio__heading">Formgivning</h3>
         <p class="member__portfolio__description">Grafisk profil, logotyp, visitkort, kläder, kataloger, produktblad, fakturor, offerter m.m. Vi hjälper dig att profilera din produkt och ditt företag.</p>
+        <div class="member__portfolio__item member__portfolio__item--second">
+          <!-- image -->
+          <h5 class="member__portfolio__item__heading">Salong Citron</h5>
+          <p class="member__portfolio__item__text">Salong Citron ville ha en ny grafisk profil med tillhörande webbsida. Fokus har legat på enkelhet och tydlighet. Det har även varit viktigt för kunden att det ska finnas ett tydligt formspråk och att kunderna lätt ska kunna navigera bland behandlingar samt boka behandling online</p>
+        </div>
       </div>
       <div class="member__portfolio__third">
         <h3 class="member__portfolio__heading">Grafik/illustration</h3>
         <p class="member__portfolio__description">Behöver du informera eller förklara en produkt, en process eller något annat viktigt som gör sig bäst i bild? Vi har lösningar för både webb och tryck.</p>
+        <div class="member__portfolio__item member__portfolio__item--third">
+          <!-- image -->
+          <h5 class="member__portfolio__item__heading">Salong Citron</h5>
+          <p class="member__portfolio__item__text">Salong Citron ville ha en ny grafisk profil med tillhörande webbsida. Fokus har legat på enkelhet och tydlighet. Det har även varit viktigt för kunden att det ska finnas ett tydligt formspråk och att kunderna lätt ska kunna navigera bland behandlingar samt boka behandling online</p>
+        </div>
       </div>
-    </div>
 
-    <div class="member__portfolio__showcase">
-      <div class="member__portfolio__item member__portfolio__item--first">
-        <!-- image -->
-        <h5 class="member__portfolio__item__heading">Salong Citron</h5>
-        <p class="member__portfolio__item__text">Salong Citron ville ha en ny grafisk profil med tillhörande webbsida. Fokus har legat på enkelhet och tydlighet. Det har även varit viktigt för kunden att det ska finnas ett tydligt formspråk och att kunderna lätt ska kunna navigera bland behandlingar samt boka behandling online</p>
-      </div>
-      <div class="member__portfolio__item member__portfolio__item--second">
-        <!-- image -->
-        <h5 class="member__portfolio__item__heading">Salong Citron</h5>
-        <p class="member__portfolio__item__text">Salong Citron ville ha en ny grafisk profil med tillhörande webbsida. Fokus har legat på enkelhet och tydlighet. Det har även varit viktigt för kunden att det ska finnas ett tydligt formspråk och att kunderna lätt ska kunna navigera bland behandlingar samt boka behandling online</p>
-      </div>
-      <div class="member__portfolio__item member__portfolio__item--third">
-        <!-- image -->
-        <h5 class="member__portfolio__item__heading">Salong Citron</h5>
-        <p class="member__portfolio__item__text">Salong Citron ville ha en ny grafisk profil med tillhörande webbsida. Fokus har legat på enkelhet och tydlighet. Det har även varit viktigt för kunden att det ska finnas ett tydligt formspråk och att kunderna lätt ska kunna navigera bland behandlingar samt boka behandling online</p>
-      </div>
+
+
     </div>
   </div>
   <div class="member__divider"></div>
