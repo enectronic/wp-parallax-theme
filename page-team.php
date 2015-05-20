@@ -12,7 +12,7 @@ Template Name: Team Layout Page
 </div>
 
 <?php $teamMembers = 3; $i = 1 ?>
-<div class="members__container"><!-- this div has an ongoing gradient -->
+<div class="members__container">
 <?php while ( $i <= $teamMembers ): ?>
   <div class="member">
     <?php if ( get_field( 'member_'. $i .'_name' ) ): ?>
