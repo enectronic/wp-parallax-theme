@@ -14,3 +14,6 @@
 
     <?php /* Include the site navigation */ ?>
     <?php get_template_part('partials/navigation') ?>
+    <a href="javascript:void(0)" class="navigation__trigger" id="navigation__trigger" title="Öppna meny">
+      <div></div>
+    </a>

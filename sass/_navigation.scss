@@ -4,6 +4,72 @@
 	top: $margin;
 	left: 50%;
 	width: 50%;
+
+  @media screen and ( max-width: 900px ) {
+    width: 100%;
+    background: slategrey;
+    top: 0;
+    left: 0;
+    transition: transform 300ms ease;
+    z-index: 1;
+  }
+}
+
+.navigation--mobile__closed {
+  @media screen and ( max-width: 900px ) {
+    transform: translateY(-100%);
+  }
+}
+
+.navigation__trigger {
+  div {
+    display: none;
+  }
+  @media screen and ( max-width: 900px ) {
+
+    display: block;
+    position: fixed;
+    z-index: 2;
+    top: .6rem;
+    right: .6rem;
+    background: #0d263c;
+    height: 42px;
+    width: 47px;
+    border-radius: 3px;
+    div {
+      display: block;
+      position: fixed;
+      z-index: 3;
+      top: 1.2rem;
+      right: 1.2rem;
+      background: #faa640;
+      height: 5px;
+      width: 28px;
+      border-radius: 3px;
+
+      &:before {
+        position: absolute;
+        content: '';
+        top: 9px;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: #faa640;
+        border-radius: 3px;
+      }
+
+      &:after {
+        position: absolute;
+        content: '';
+        top: 18px;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: #faa640;
+        border-radius: 3px;
+      }
+    }
+  }
 }
 
 .navigation__options {
@@ -15,8 +81,8 @@
 .navigation__item {
 	/* The li */
   float: left;
-  width: 25%;
 	height: 50px;
+  width: 25%;
   display: table;
 
 	a {
@@ -27,6 +93,10 @@
 		text-align: center;
 		height: 100%;
 	}
+
+  @media screen and ( max-width: 900px ) {
+    width: 100%;
+  }
 }
 
 .current-menu-item {

@@ -103,3 +103,26 @@ var Parallax = (function() {
       startInterval();
     });
 })();
+
+var Navigation = (function() {
+
+  var $TRIGGER = $('#navigation__trigger');
+  var $NAV = $('#navigation');
+
+  var bindUIActions = function() {
+    $TRIGGER.on('click', toggleNavigation);
+  };
+
+  var toggleNavigation = function() {
+    $NAV.toggleClass('navigation--mobile__closed');
+  };
+
+  return {
+    init: bindUIActions
+  }
+
+})();
+
+$(function() {
+  Navigation.init();
+});
