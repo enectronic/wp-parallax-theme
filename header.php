@@ -3,6 +3,7 @@
     <head>
       <meta charset="<?php bloginfo('charset') ?>">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <meta name="theme-color" content="#0d263c">
       <title><?php bloginfo('title') ?></title>
       <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 

@@ -179,6 +179,28 @@ var ScrollControl = (function() {
 
 })();
 
+var SkillSetWidget = (function() {
+
+  'use strict';
+
+  var $CLICKABLE_HEADING = $('.member__skills__heading');
+
+  var bindUIActions = function() {
+    $CLICKABLE_HEADING.on(CLICK_EVENT, function() {
+      toggleSkillSet($(this).next('.member__skills__group'));
+    });
+  }
+
+  var toggleSkillSet = function($group) {
+    $group.toggleClass('member__skills__group--opened');
+  }
+
+  return {
+    init: bindUIActions
+  }
+})();
+
 $(function() {
   Navigation.init();
+  SkillSetWidget.init();
 });

@@ -55,13 +55,16 @@ Template Name: Team Layout Page
             $textArr = explode("\n", $text);
             $textArr = array_filter($textArr, 'trim');
 
+            ?>
+            <div class="member__skills__group">
+            <?php
             foreach ( $textArr as $line ) {
 
               echo '<p class="member__skills__skill">'. $line .'</p>';
 
             }
-
-          ?>
+            ?>
+            </div>
         <?php endif; ?>
         <?php if ( get_field( 'member_'. $i .'_skillset_2_heading' ) ): ?>
         <h3 class="member__skills__heading"><?php the_field( 'member_'. $i .'_skillset_2_heading' ) ?></h3>
@@ -73,13 +76,16 @@ Template Name: Team Layout Page
             $textArr = explode("\n", $text);
             $textArr = array_filter($textArr, 'trim');
 
+            ?>
+            <div class="member__skills__group">
+            <?php
             foreach ( $textArr as $line ) {
 
               echo '<p class="member__skills__skill">'. $line .'</p>';
 
             }
-
           ?>
+          </div>
         <?php endif; ?>
       </div>
       <div class="member__skills__right">
@@ -93,13 +99,16 @@ Template Name: Team Layout Page
             $textArr = explode("\n", $text);
             $textArr = array_filter($textArr, 'trim');
 
+            ?>
+            <div class="member__skills__group">
+            <?php
             foreach ( $textArr as $line ) {
 
               echo '<p class="member__skills__skill">'. $line .'</p>';
 
             }
-
-          ?>
+            ?>
+            </div>
         <?php endif; ?>
 
         <?php if ( get_field( 'member_'. $i .'_skillset_4_heading' ) ): ?>
@@ -112,13 +121,16 @@ Template Name: Team Layout Page
             $textArr = explode("\n", $text);
             $textArr = array_filter($textArr, 'trim');
 
+            ?>
+            <div class="member__skills__group">
+            <?php
             foreach ( $textArr as $line ) {
 
               echo '<p class="member__skills__skill">'. $line .'</p>';
 
             }
-
-          ?>
+            ?>
+            </div>
         <?php endif; ?>
 
         <?php if ( get_field( 'member_'. $i .'_skillset_5_heading' ) ): ?>
@@ -131,13 +143,16 @@ Template Name: Team Layout Page
             $textArr = explode("\n", $text);
             $textArr = array_filter($textArr, 'trim');
 
+            ?>
+            <div class="member__skills__group">
+            <?php
             foreach ( $textArr as $line ) {
 
               echo '<p class="member__skills__skill">'. $line .'</p>';
 
             }
-
-          ?>
+            ?>
+            </div>
         <?php endif; ?>
       </div>
     </div>

@@ -26,7 +26,6 @@
 
   // Component styles
   margin-top: 2 * $margin;
-
 }
 
 .member__name {
@@ -52,7 +51,7 @@
 
   // Media queries
   @media screen and ( max-width: 960px ) {
-    @include span-columns(6);
+    @include span-columns(12);
   }
 
   @media screen and ( max-width: 750px ) {
@@ -137,12 +136,31 @@
 
   // Component responsive queries
   @media screen and ( max-width: 960px ) {
-    @include span-columns(5);
+    @include span-columns(12);
+    margin-top: $margin;
   }
 
-  // Media queries
-  @media screen and ( max-width: 750px ) {
-    @include span-columns(12);
+  @media screen and ( max-width: 600px ) {
+    @include span-columns(12 of 12);
+    margin-top: $margin / 2;
+  }
+}
+
+.member__skills__group {
+  @media screen and ( max-width: 600px ) {
+    transition: all 250ms ease;
+    transform-origin: 0 50%;
+    max-height: 0;
+    transform: scaleY(0);
+  }
+}
+
+.member__skills__group--opened {
+  @media screen and ( max-width: 600px ) {
+    transition: all 250ms ease;
+    transform-origin: 0 50%;
+    max-height: 100%;
+    transform: scaleY(1);
   }
 }
 
@@ -152,10 +170,6 @@
 
   // Media queries
   @media screen and ( max-width: 960px ) {
-    @include span-columns(12 of 12);
-  }
-
-  @media screen and ( max-width: 750px ) {
     @include span-columns(6 of 12);
   }
 
@@ -169,14 +183,6 @@
   @include span-columns(6 of 12);
 
   // Component responsive queries
-  @media screen and ( max-width: 960px ) {
-    display: none;
-  }
-
-  @media screen and ( max-width: 750px ) {
-    display: block;
-  }
-
   @media screen and ( max-width: 600px ) {
     margin-top: $margin;
     @include span-columns(12 of 12);
