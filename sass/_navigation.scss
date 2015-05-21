@@ -36,6 +36,7 @@
     height: 42px;
     width: 47px;
     border-radius: 3px;
+
     div {
       display: block;
       position: fixed;
@@ -46,6 +47,7 @@
       height: 5px;
       width: 28px;
       border-radius: 3px;
+      transition: transform 250ms ease;
 
       &:before {
         position: absolute;
@@ -56,6 +58,7 @@
         height: 5px;
         background: #faa640;
         border-radius: 3px;
+        transition: opacity 250ms ease;
       }
 
       &:after {
@@ -67,8 +70,24 @@
         height: 5px;
         background: #faa640;
         border-radius: 3px;
+        transition: transform 250ms ease;
       }
     }
+  }
+}
+
+.navigation__trigger .navigation__trigger--opened {
+  top: 1.2rem;
+  right: .8rem;
+  transform: rotateZ(45deg);
+  transform-origin: 0 0;
+  &:before {
+    opacity: 0;
+  }
+
+  &:after {
+    transform: translate(0%, -350%) rotateZ(-90deg);
+    transform-origin: 0, 0;
   }
 }
 

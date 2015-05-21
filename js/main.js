@@ -106,6 +106,8 @@ var Parallax = (function() {
 
 var Navigation = (function() {
 
+  'use strict';
+
   var $TRIGGER = $('#navigation__trigger');
   var $NAV = $('#navigation');
 
@@ -115,6 +117,7 @@ var Navigation = (function() {
 
   var toggleNavigation = function() {
     $NAV.toggleClass('navigation--mobile__closed');
+    $TRIGGER.find('div').toggleClass('navigation__trigger--opened');
   };
 
   return {
