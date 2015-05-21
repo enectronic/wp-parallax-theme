@@ -1,3 +1,13 @@
+var CLICK_EVENT = (function() {
+  'use strict';
+
+  if ( 'ontouchstart' in window ) {
+    return 'touchend';
+  }
+  alert('kom hit :)');
+  return 'click';
+})();
+
 // Parallax scrolling module. Self initialised
 var Parallax = (function() {
 
@@ -113,7 +123,7 @@ var Navigation = (function() {
   var $NAV = $('#navigation');
 
   var bindUIActions = function() {
-    $TRIGGER.on('click', toggleNavigation);
+    $TRIGGER.on(CLICK_EVENT, toggleNavigation);
   };
 
   var toggleNavigation = function() {
