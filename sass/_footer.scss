@@ -1,0 +1,13 @@
+.footer {
+  // Component styles
+  position: relative;
+  float: left;
+  width: 100%;
+  background: rgb(13, 38, 60);
+}
+
+.footer__image {
+  width: 100%;
+  position: absolute;
+  top: -20vw;
+}

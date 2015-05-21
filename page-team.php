@@ -144,30 +144,54 @@ Template Name: Team Layout Page
 
     <div class="member__portfolio__items">
       <div class="member__portfolio__first">
-        <h3 class="member__portfolio__heading">UX/Webdesign</h3>
-        <p class="member__portfolio__description">Vi gör din webbsida från grunden eller hjälper dig med betalningslösningar m.m.</p>
+        <?php if ( get_field( 'member_'. $i .'_project_category_1' ) ): ?>
+          <h3 class="member__portfolio__heading"><?php the_field( 'member_'. $i .'_project_category_1' ) ?></h3>
+        <?php endif; ?>
+
         <div class="member__portfolio__item member__portfolio__item--first">
+          <?php if ( get_field( 'member_'. $i . '_project_image_1' ) ): ?>
           <!-- image -->
-          <h5 class="member__portfolio__item__heading">Salong Citron</h5>
-          <p class="member__portfolio__item__text">Salong Citron ville ha en ny grafisk profil med tillhörande webbsida. Fokus har legat på enkelhet och tydlighet. Det har även varit viktigt för kunden att det ska finnas ett tydligt formspråk och att kunderna lätt ska kunna navigera bland behandlingar samt boka behandling online</p>
+          <?php endif; ?>
+          <?php if ( get_field( 'member_'. $i .'_project_heading_1' ) ): ?>
+          <h5 class="member__portfolio__item__heading"><?php the_field( 'member_'. $i .'_project_heading_1' ) ?></h5>
+          <?php endif; ?>
+          <?php if ( get_field( 'member_'. $i .'_project_description_1' ) ): ?>
+          <p class="member__portfolio__item__text"><?php the_field( 'member_'. $i .'_project_description_1' ) ?></p>
+          <?php endif; ?>
         </div>
       </div>
       <div class="member__portfolio__second">
-        <h3 class="member__portfolio__heading">Formgivning</h3>
-        <p class="member__portfolio__description">Grafisk profil, logotyp, visitkort, kläder, kataloger, produktblad, fakturor, offerter m.m. Vi hjälper dig att profilera din produkt och ditt företag.</p>
-        <div class="member__portfolio__item member__portfolio__item--second">
+        <?php if ( get_field( 'member_'. $i .'_project_category_2' ) ): ?>
+          <h3 class="member__portfolio__heading"><?php the_field( 'member_'. $i .'_project_category_2' ) ?></h3>
+        <?php endif; ?>
+
+        <div class="member__portfolio__item member__portfolio__item--first">
+          <?php if ( get_field( 'member_'. $i . '_project_image_2' ) ): ?>
           <!-- image -->
-          <h5 class="member__portfolio__item__heading">Salong Citron</h5>
-          <p class="member__portfolio__item__text">Salong Citron ville ha en ny grafisk profil med tillhörande webbsida. Fokus har legat på enkelhet och tydlighet. Det har även varit viktigt för kunden att det ska finnas ett tydligt formspråk och att kunderna lätt ska kunna navigera bland behandlingar samt boka behandling online</p>
+          <?php endif; ?>
+          <?php if ( get_field( 'member_'. $i .'_project_heading_2' ) ): ?>
+          <h5 class="member__portfolio__item__heading"><?php the_field( 'member_'. $i .'_project_heading_2' ) ?></h5>
+          <?php endif; ?>
+          <?php if ( get_field( 'member_'. $i .'_project_description_2' ) ): ?>
+          <p class="member__portfolio__item__text"><?php the_field( 'member_'. $i .'_project_description_2' ) ?></p>
+          <?php endif; ?>
         </div>
       </div>
       <div class="member__portfolio__third">
-        <h3 class="member__portfolio__heading">Grafik/illustration</h3>
-        <p class="member__portfolio__description">Behöver du informera eller förklara en produkt, en process eller något annat viktigt som gör sig bäst i bild? Vi har lösningar för både webb och tryck.</p>
-        <div class="member__portfolio__item member__portfolio__item--third">
+        <?php if ( get_field( 'member_'. $i .'_project_category_3' ) ): ?>
+          <h3 class="member__portfolio__heading"><?php the_field( 'member_'. $i .'_project_category_3' ) ?></h3>
+        <?php endif; ?>
+
+        <div class="member__portfolio__item member__portfolio__item--first">
+          <?php if ( get_field( 'member_'. $i . '_project_image_3' ) ): ?>
           <!-- image -->
-          <h5 class="member__portfolio__item__heading">Salong Citron</h5>
-          <p class="member__portfolio__item__text">Salong Citron ville ha en ny grafisk profil med tillhörande webbsida. Fokus har legat på enkelhet och tydlighet. Det har även varit viktigt för kunden att det ska finnas ett tydligt formspråk och att kunderna lätt ska kunna navigera bland behandlingar samt boka behandling online</p>
+          <?php endif; ?>
+          <?php if ( get_field( 'member_'. $i .'_project_heading_3' ) ): ?>
+          <h5 class="member__portfolio__item__heading"><?php the_field( 'member_'. $i .'_project_heading_3' ) ?></h5>
+          <?php endif; ?>
+          <?php if ( get_field( 'member_'. $i .'_project_description_3' ) ): ?>
+          <p class="member__portfolio__item__text"><?php the_field( 'member_'. $i .'_project_description_3' ) ?></p>
+          <?php endif; ?>
         </div>
       </div>
 

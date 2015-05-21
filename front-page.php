@@ -118,7 +118,7 @@
           <h3 class="team__member__name"><?php the_field( 'person-'. $i .'-name' ) ?></h3>
           <?php endif; ?>
           <?php if ( get_field( 'person-'. $i .'-profession' ) ): ?>
-          <p class="team__member__role"><?php the_field( 'person-'. $i .'-profession' ) ?></p>
+          <h4 class="team__member__role"><?php the_field( 'person-'. $i .'-profession' ) ?></h4>
           <?php endif; ?>
           <?php if ( get_field( 'person-'. $i .'-text' ) ): ?>
           <p class="team__member__text"><?php the_field( 'person-'. $i .'-text' ) ?></p>

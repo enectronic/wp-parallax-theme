@@ -231,6 +231,10 @@
   height: 2px;
   background: #fff;
 
+  &:last-of-type {
+    background: transparent;
+  }
+
   // Responsive queries
   @media screen and ( max-width: 960px ) {
     margin: 2*$margin 0;
@@ -258,10 +262,6 @@
 
   // Responsive media queries
   @media screen and ( max-width: 815px ) {
-    @include span-columns(6);
-  }
-
-  @media screen and ( max-width: 700px ) {
     @include span-columns(12);
   }
 }
@@ -272,10 +272,6 @@
 
   // Responsive media queries
   @media screen and ( max-width: 815px ) {
-    @include span-columns(6);
-  }
-
-  @media screen and ( max-width: 700px ) {
     @include span-columns(12);
   }
 }
@@ -283,6 +279,7 @@
 .member__portfolio__items {
   float: left;
   margin-top: 2*$margin;
+  @include span-columns(12);
 }
 
 // Portfolio "type-of" heading
@@ -293,27 +290,9 @@
   margin-bottom: $margin/4;
 }
 
-// Portfolio "type-of" description
-.member__portfolio__description {
-  color: #fff;
-  font-size: .8rem;
-  line-height: 1.3;
-  height: 100px;
-
-  @media screen and ( max-width: 815px ) {
-    height: 70px;
-  }
-
-  @media screen and ( max-width: 815px ) {
-    height: auto;
-    margin-bottom: $margin/2;
-  }
-}
-
 // Portfolio item wrapper
 .member__portfolio__item {
   background: rgba(13, 38, 60, .6);
-  padding: $padding / 4;
 }
 
 .member__portfolio__item--first {
@@ -338,7 +317,7 @@
 .member__portfolio__item__heading {
   color: #fff;
   text-transform: uppercase;
-  margin-bottom: $margin/5;
+  padding: $padding / 4;
 }
 
 // The portfolio item description
@@ -346,4 +325,5 @@
   color: #fff;
   font-size: .8rem;
   line-height: 1.3;
+  padding: 0 ($padding / 4) ($padding / 4) ($padding / 4);
 }

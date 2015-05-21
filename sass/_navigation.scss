@@ -4,13 +4,13 @@
 	top: 0;
 	left: 0;
   width: 100%;
+  z-index: 1;
   @include linear-gradient(to right, transparent, rgba(13, 38,60, .6));
 
   // Responsive queries
   @media screen and ( max-width: 768px ) {
     background: rgba(13, 38, 60, .4);
     transition: transform 300ms ease;
-    z-index: 1;
   }
 }
 
@@ -127,9 +127,7 @@
 	/* Wordpress own active class,
 	   it is set on the li element */
 
-  @media screen and ( max-width: 768px ) {
     background: rgba(13, 38, 60, .8);
     font-weight: bold;
     font-size: 1.2rem;
-  }
 }
