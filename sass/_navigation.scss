@@ -6,11 +6,17 @@
   width: 100%;
   z-index: 1;
   @include linear-gradient(to right, transparent, rgba(13, 38,60, .6));
-
+transition: transform 250ms ease;
   // Responsive queries
   @media screen and ( max-width: 768px ) {
     background: rgba(13, 38, 60, .4);
     transition: transform 300ms ease;
+  }
+}
+
+.navigation--desktop__closed {
+  @media screen and ( min-width: 769px ) {
+    transform: translateY(-100%);
   }
 }
 

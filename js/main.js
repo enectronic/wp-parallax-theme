@@ -99,6 +99,7 @@ var Parallax = (function() {
     // Add needed event listeners
     window.addEventListener('resize', calculateWindowHeight);
     window.addEventListener('scroll', function() {
+      ScrollControl.calculateScrollDistance();
       userScrollTopReference = document.all ? iebody.scrollTop : pageYOffset;
       startInterval();
     });
@@ -122,6 +123,48 @@ var Navigation = (function() {
 
   return {
     init: bindUIActions
+  }
+
+})();
+
+var ScrollControl = (function() {
+
+  'use strict';
+
+  var treshold = 5;
+  var previousScrollDistance = 0;
+  var $NAV = $('#navigation');
+  var $WINDOW = $(window);
+
+  /*var bindUIActions = function() {
+    window.addEventListener('scroll', calculateScrollDistance);
+  };*/
+
+  var calculateScrollDistance = function() {
+    var diff = $WINDOW.scrollTop() - previousScrollDistance;
+
+    if(diff > treshold){
+      hideMenu();
+    }
+
+    if ( diff < -treshold ) {
+      showMenu();
+    }
+
+    previousScrollDistance = $WINDOW.scrollTop();
+  }
+
+  var hideMenu = function() {
+    $NAV.addClass('navigation--desktop__closed');
+  }
+
+  var showMenu = function() {
+    $NAV.removeClass('navigation--desktop__closed');
+  }
+
+  return {
+    // Used by the scroll listener in the parallax module for now.
+    calculateScrollDistance: calculateScrollDistance
   }
 
 })();

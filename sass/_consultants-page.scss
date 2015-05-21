@@ -1,0 +1,74 @@
+.consultants-container {
+  // Bourbon mixin
+  @include linear-gradient(rgb(13, 38, 60), rgb(164, 210, 220));
+
+  // Component styles
+  padding: calc(2 * #{$padding});
+  float: left;
+  width: 100%;
+  background-size: 100%;
+
+  @media screen and ( max-width: 440px ) {
+    padding: $padding;
+  }
+}
+
+.consultants {
+  // Neat grid mixin
+  @include outer-container();
+}
+
+.consultants__info {
+  // Neat grid mixin
+  @include span-columns(6);
+}
+
+.consultants__info__heading {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-bottom: $margin / 2;
+}
+
+.consultants__info__prefix {
+  color: #fff;
+  margin-bottom: $margin / 4;
+}
+
+.consultants__info__list {
+  list-style-type: circle;
+  margin-left: $margin / 2;
+}
+
+.consultants__info__list__item {
+  color: #fff;
+  margin-bottom: $margin / 4;
+}
+
+.consultants__illustration {
+  // Neat grid mixin
+  @include span-columns(6);
+}
+
+// White divider between member info and portfolio
+.consultants__divider {
+  // Neat grid mixins
+  @include outer-container();
+
+  // Component styles
+  max-width: 68em;
+  height: 2px;
+  background: #fff;
+  margin-top: $margin;
+  margin-bottom: $margin;
+
+  &:last-of-type {
+    background: transparent;
+    margin-bottom: 2*$margin;
+  }
+
+  // Responsive queries
+  @media screen and ( max-width: 960px ) {
+    margin: 2*$margin 0;
+  }
+}

@@ -1,0 +1,22 @@
+.top-bar {
+  float: left;
+  background: rgb(47, 79, 105);
+  background-image: url(img/parallax_rock.min.png); /* fallback */
+  background-image: url(img/parallax_rock.min.png), -webkit-gradient(linear, left top, left bottom, from(rgb(47, 79, 105)), to(rgb(132, 171, 184))); /* Saf4+, Chrome */
+  background-image: url(img/parallax_rock.min.png), -webkit-linear-gradient(top, rgb(47, 79, 105), rgb(132, 171, 184)); /* Chrome 10+, Saf5.1+ */
+  background-image: url(img/parallax_rock.min.png),    -moz-linear-gradient(top, rgb(47, 79, 105), rgb(132, 171, 184)); /* FF3.6+ */
+  background-image: url(img/parallax_rock.min.png),      -o-linear-gradient(top, rgb(47, 79, 105), rgb(132, 171, 184)); /* Opera 11.10+ */
+  background-image: url(img/parallax_rock.min.png),         linear-gradient(to bottom, rgb(47, 79, 105), rgb(132, 171, 184)); /* W3C */
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100%;
+
+  float: left;
+  width: 100%;
+  height: 250px;
+  padding: $padding;
+
+  @media screen and ( max-width: 440px ) {
+    padding: $padding / 2;
+  }
+}

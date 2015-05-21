@@ -5,7 +5,7 @@ Template Name: Team Layout Page
 ?>
 <?php get_header(); ?>
 
-<div class="team-top-bar">
+<div class="top-bar">
 
 </div>
 
