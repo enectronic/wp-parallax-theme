@@ -4,7 +4,7 @@
       <meta charset="<?php bloginfo('charset') ?>">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       <title><?php bloginfo('title') ?></title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
       <link rel="apple-touch-icon" href="apple-touch-icon.png">
       <link href='http://fonts.googleapis.com/css?family=Raleway:400,700,300|Roboto:300' rel='stylesheet' type='text/css'>

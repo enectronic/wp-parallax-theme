@@ -4,7 +4,7 @@ var CLICK_EVENT = (function() {
   if ( 'ontouchstart' in window ) {
     return 'touchend';
   }
-  alert('kom hit :)');
+
   return 'click';
 })();
 
