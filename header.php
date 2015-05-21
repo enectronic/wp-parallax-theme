@@ -7,7 +7,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <link rel="apple-touch-icon" href="apple-touch-icon.png">
-      <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Raleway:400,700,300|Roboto:300' rel='stylesheet' type='text/css'>
       <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>

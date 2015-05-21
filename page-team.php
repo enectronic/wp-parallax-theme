@@ -6,9 +6,7 @@ Template Name: Team Layout Page
 <?php get_header(); ?>
 
 <div class="team-top-bar">
-  <div class="team-top-bar__logo">
-    <img class="team-top-bar__logo-image" src="<?php bloginfo('template_directory'); ?>/img/parallax_logo.min.png" />
-  </div>
+
 </div>
 
 <?php $teamMembers = 3; $i = 1 ?>
@@ -39,13 +37,110 @@ Template Name: Team Layout Page
         </div>
         <?php endif; ?>
       </div>
+      <?php if ( get_field( 'member_'. $i .'_presentation' ) ): ?>
+      <div class="member__text">
+        <p><?php the_field( 'member_'. $i .'_presentation' ); ?></p>
+      </div>
+      <?php endif; ?>
     </div>
-    <?php if ( get_field( 'member_'. $i .'_presentation' ) ): ?>
-    <div class="member__text">
-      <p><?php the_field( 'member_'. $i .'_presentation' ); ?></p>
+    <div class="member__skills__container">
+      <div class="member__skills__left">
+        <?php if ( get_field( 'member_'. $i .'_skillset_1_heading' ) ): ?>
+        <h3 class="member__skills__heading"><?php the_field( 'member_'. $i .'_skillset_1_heading' ) ?></h3>
+        <?php endif; ?>
+        <?php if ( get_field( 'member_'. $i .'_skillset_1' ) ): ?>
+          <?php
+
+            $text = get_field( 'member_'. $i .'_skillset_1' );
+            $textArr = explode("\n", $text);
+            $textArr = array_filter($textArr, 'trim');
+
+            foreach ( $textArr as $line ) {
+
+              echo '<p class="member__skills__skill">'. $line .'</p>';
+
+            }
+
+          ?>
+        <?php endif; ?>
+        <?php if ( get_field( 'member_'. $i .'_skillset_2_heading' ) ): ?>
+        <h3 class="member__skills__heading"><?php the_field( 'member_'. $i .'_skillset_2_heading' ) ?></h3>
+        <?php endif; ?>
+        <?php if ( get_field( 'member_'. $i .'_skillset_2' ) ): ?>
+          <?php
+
+            $text = get_field( 'member_'. $i .'_skillset_2' );
+            $textArr = explode("\n", $text);
+            $textArr = array_filter($textArr, 'trim');
+
+            foreach ( $textArr as $line ) {
+
+              echo '<p class="member__skills__skill">'. $line .'</p>';
+
+            }
+
+          ?>
+        <?php endif; ?>
+      </div>
+      <div class="member__skills__right">
+        <?php if ( get_field( 'member_'. $i .'_skillset_3_heading' ) ): ?>
+        <h3 class="member__skills__heading"><?php the_field( 'member_'. $i .'_skillset_3_heading' ) ?></h3>
+        <?php endif; ?>
+        <?php if ( get_field( 'member_'. $i .'_skillset_3' ) ): ?>
+          <?php
+
+            $text = get_field( 'member_'. $i .'_skillset_3' );
+            $textArr = explode("\n", $text);
+            $textArr = array_filter($textArr, 'trim');
+
+            foreach ( $textArr as $line ) {
+
+              echo '<p class="member__skills__skill">'. $line .'</p>';
+
+            }
+
+          ?>
+        <?php endif; ?>
+
+        <?php if ( get_field( 'member_'. $i .'_skillset_4_heading' ) ): ?>
+        <h3 class="member__skills__heading"><?php the_field( 'member_'. $i .'_skillset_4_heading' ) ?></h3>
+        <?php endif; ?>
+        <?php if ( get_field( 'member_'. $i .'_skillset_4' ) ): ?>
+          <?php
+
+            $text = get_field( 'member_'. $i .'_skillset_4' );
+            $textArr = explode("\n", $text);
+            $textArr = array_filter($textArr, 'trim');
+
+            foreach ( $textArr as $line ) {
+
+              echo '<p class="member__skills__skill">'. $line .'</p>';
+
+            }
+
+          ?>
+        <?php endif; ?>
+
+        <?php if ( get_field( 'member_'. $i .'_skillset_5_heading' ) ): ?>
+        <h3 class="member__skills__heading"><?php the_field( 'member_'. $i .'_skillset_5_heading' ) ?></h3>
+        <?php endif; ?>
+        <?php if ( get_field( 'member_'. $i .'_skillset_5' ) ): ?>
+          <?php
+
+            $text = get_field( 'member_'. $i .'_skillset_5' );
+            $textArr = explode("\n", $text);
+            $textArr = array_filter($textArr, 'trim');
+
+            foreach ( $textArr as $line ) {
+
+              echo '<p class="member__skills__skill">'. $line .'</p>';
+
+            }
+
+          ?>
+        <?php endif; ?>
+      </div>
     </div>
-    <?php endif; ?>
-    <div class="member__skills">3</div>
 
     <div class="member__portfolio__items">
       <div class="member__portfolio__first">

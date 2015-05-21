@@ -1,15 +1,14 @@
 .navigation {
 	/* The nav container */
 	position: fixed;
-	top: $margin;
-	left: 50%;
-	width: 50%;
+	top: 0;
+	left: 0;
+  width: 100%;
+  @include linear-gradient(to right, transparent, rgba(13, 38,60, .6));
 
+  // Responsive queries
   @media screen and ( max-width: 768px ) {
-    width: 100%;
-    background: slategrey;
-    top: 0;
-    left: 0;
+    background: rgba(13, 38, 60, .4);
     transition: transform 300ms ease;
     z-index: 1;
   }
@@ -93,8 +92,14 @@
 
 .navigation__options {
 	/* The ul */
-  float: left;
-  width: 100%;
+  float: right;
+  width: 50%;
+
+  // Responsive media queries
+  @media screen and ( max-width: 768px ) {
+    float: left;
+    width: 100%;
+  }
 }
 
 .navigation__item {
@@ -121,4 +126,10 @@
 .current-menu-item {
 	/* Wordpress own active class,
 	   it is set on the li element */
+
+  @media screen and ( max-width: 768px ) {
+    background: rgba(13, 38, 60, .8);
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
 }
