@@ -63,7 +63,7 @@ transition: transform 250ms ease;
         height: 5px;
         background: #faa640;
         border-radius: 3px;
-        transition: opacity 250ms ease;
+        transition: opacity 250ms ease, transform 250ms ease;
       }
 
       &:after {
@@ -82,12 +82,11 @@ transition: transform 250ms ease;
 }
 
 .navigation__trigger .navigation__trigger--opened {
-  top: 1.2rem;
-  right: .8rem;
-  transform: rotateZ(45deg);
+  transform: rotateZ(45deg) translate(.3rem, -.2rem);
   transform-origin: 0 0;
   &:before {
     opacity: 0;
+    transform: translateX(-200%);
   }
 
   &:after {
