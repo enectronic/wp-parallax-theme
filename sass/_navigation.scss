@@ -5,7 +5,7 @@
 	left: 50%;
 	width: 50%;
 
-  @media screen and ( max-width: 900px ) {
+  @media screen and ( max-width: 768px ) {
     width: 100%;
     background: slategrey;
     top: 0;
@@ -16,7 +16,7 @@
 }
 
 .navigation--mobile__closed {
-  @media screen and ( max-width: 900px ) {
+  @media screen and ( max-width: 768px ) {
     transform: translateY(-100%);
   }
 }
@@ -25,7 +25,7 @@
   div {
     display: none;
   }
-  @media screen and ( max-width: 900px ) {
+  @media screen and ( max-width: 768px ) {
 
     display: block;
     position: fixed;
@@ -94,7 +94,7 @@
 		height: 100%;
 	}
 
-  @media screen and ( max-width: 900px ) {
+  @media screen and ( max-width: 768px ) {
     width: 100%;
   }
 }
