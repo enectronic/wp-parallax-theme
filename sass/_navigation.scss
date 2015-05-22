@@ -34,6 +34,7 @@
   z-index: 2;
   transition: transform 250ms ease;
   width: 50%;
+  pointer-events: none;
 
   // Component responsive queries
   @media screen and ( min-width: 769px ) {
@@ -50,7 +51,9 @@
 
 .navigation__extras__inner a {
   float: left;
-  max-width: 50%;
+  width: 50%;
+  text-align: center;
+  pointer-events: all;
 }
 
 .navigation__extras__inner img {

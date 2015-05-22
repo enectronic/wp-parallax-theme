@@ -138,6 +138,35 @@ Template Name: Consultants Page
 
   <?php $i++; endwhile; ?>
 
+  <?php
+    // The following is the last section of the consultants
+    // page, and should not be looped through as the others
+    // since a list should not be generated.
+  ?>
+
+  <div class="consultants">
+    <div class="consultants__illustration">
+      <?php if ( get_field( 'consultant_image_6' ) ): ?>
+      <img class="consultants__illustration__image" src="<?php the_field( 'consultant_image_6' ) ?>" />
+      <?php endif; ?>
+    </div>
+    <div class="consultants__info">
+      <?php if ( get_field( 'consultants_heading_6' ) ): ?>
+      <h2 class="consultants__info__heading"><?php the_field( 'consultants_heading_6' ) ?></h2>
+      <?php endif; ?>
+      <?php
+        // If the custom field exists (a textarea),
+        // we want to split it into an array at each
+        // newline, then print a list item with each
+        // line from the textarea
+      ?>
+      <?php if ( get_field( 'consultant_competences_6' ) ): ?>
+        <p class="consultants__intro__text"><?php the_field('consultant_competences_6') ?></p>
+      <?php endif; ?>
+    </div>
+  </div>
+  <div class="consultants__divider"></div>
+
 </div>
 
 <?php get_footer(); ?>

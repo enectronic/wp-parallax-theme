@@ -21,6 +21,10 @@
 .consultants__info {
   // Neat grid mixin
   @include span-columns(6);
+
+  @media screen and (max-width: 850px) {
+    @include span-columns(12);
+  }
 }
 
 .consultants__info__heading {
@@ -28,6 +32,14 @@
   text-transform: uppercase;
   font-size: 2rem;
   margin-bottom: $margin / 2;
+
+  @media screen and (max-width: 850px) {
+    padding-top: 1rem;
+  }
+
+  @media screen and (max-width: 435px) {
+    font-size: 1.5rem;
+  }
 }
 
 .consultants__intro__text {
@@ -53,12 +65,16 @@
 .consultants__illustration {
   // Neat grid mixin
   @include span-columns(6);
+
+  @media screen and (max-width: 850px) {
+    @include span-columns(12);
+  }
 }
 
 .consultants__illustration__with-text {
   position: relative;
   &:before {
-    content: 'Om du hyr en konsult av LS Entertainment får du en ambitiös och noggrann person som är van att ta mycket eget ansvar. Skriv in mer text om vad vi kan erbjuda och hur vi är vana att arbeta gentemot företag. Information om prisuppgifter.';
+    content: 'Om du hyr en konsult av LS Entertainment får du en ambitiös och noggrann person som är van att ta mycket eget ansvar.';
     position: absolute;
     font-family: $fontStack;
     color: #fff;
@@ -69,6 +85,9 @@
     padding: 12px;
     font-size: .9rem;
     line-height: 1.3;
+    @media screen and (max-width: 920px) {
+      display: none;
+    }
   }
 }
 
