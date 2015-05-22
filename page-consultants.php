@@ -12,6 +12,7 @@ Template Name: Consultants Page
 <div class="consultants-container">
 
   <?php
+    // Iteration setup
     $competences = 5;
     $i = 1;
     while ( $i <= $competences ):
@@ -24,7 +25,12 @@ Template Name: Consultants Page
       <?php endif; ?>
       <p class="consultants__info__prefix">Vi kan:</p>
       <ul class="consultants__info__list">
-
+      <?php
+        // If the custom field exists (a textarea),
+        // we want to split it into an array at each
+        // newline, then print a list item with each
+        // line from the textarea
+      ?>
       <?php if ( get_field( 'consultant_competences_'. $i ) ): ?>
         <?php
 

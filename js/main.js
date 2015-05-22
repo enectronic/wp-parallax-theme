@@ -1,3 +1,7 @@
+// Detect the type of click for use
+// on the rest of our page in order
+// to remove the 300ms delay for touch
+// devices.
 var CLICK_EVENT = (function() {
   'use strict';
 
