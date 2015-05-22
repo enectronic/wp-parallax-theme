@@ -13,8 +13,9 @@
     </head>
     <body <?php body_class(); ?>>
 
-    <?php /* Include the site navigation */ ?>
-    <?php get_template_part('partials/navigation') ?>
+    <?php /* Include google analytics and the site navigation */ ?>
+    <?php get_template_part('partials/analyticstracking'); ?>
+    <?php get_template_part('partials/navigation'); ?>
     <a href="javascript:void(0)" class="navigation__trigger" id="navigation__trigger" title="Öppna meny">
       <div></div>
     </a>

@@ -8,6 +8,10 @@
   margin: $margin auto;
 
   // Component media queries
+  @media screen and (max-width: 1450px) {
+    padding: 0;
+  }
+
 	@media screen and (max-width: 600px) {
 	    padding: $padding;
 	}
