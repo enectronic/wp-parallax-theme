@@ -4,10 +4,19 @@
   float: left;
   width: 100%;
   background: rgb(13, 38, 60);
+  text-align: center;
 }
 
 .footer__image {
   width: 100%;
   position: absolute;
   top: -20vw;
+  left: 0;
+}
+
+.footer__logo {
+  margin-top: $margin / 2;
+  margin-bottom: -$margin / 1.5;
+  width: 20%;
+  max-width: 150px;
 }

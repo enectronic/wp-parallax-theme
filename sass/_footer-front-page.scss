@@ -4,6 +4,7 @@
   float: left;
   width: 100%;
   background: rgb(13, 38, 60);
+  text-align: center;
 }
 
 // The div holding the image
@@ -40,6 +41,7 @@
 
 // The footer text content
 .footer-front-page__text {
+  text-align: left;
   padding: 0 $padding;
   margin-top: $margin;
   color: #fff;

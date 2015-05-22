@@ -18,3 +18,13 @@
     <a href="javascript:void(0)" class="navigation__trigger" id="navigation__trigger" title="Öppna meny">
       <div></div>
     </a>
+    <div class="navigation__extras">
+      <div class="navigation__extras__inner">
+        <a href="tel:+46730732034">
+          <img src="<?php bloginfo('template_directory'); ?>/img/navigation_phone.png" />
+        </a>
+        <a href="mailto:kontakt@lsentertainment.se">
+          <img src="<?php bloginfo('template_directory'); ?>/img/navigation_email.png" />
+        </a>
+      </div>
+    </div>

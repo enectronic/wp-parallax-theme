@@ -48,6 +48,9 @@ var Parallax = (function() {
       }
     };
 
+    // Used to stop the interval if the user is either
+    // at the top of the page or has scrolled passed
+    // the parallax effect.
     var stopInterval = function() {
       clearInterval(parallaxScrollInterval);
       intervalRunning = false;
@@ -119,6 +122,8 @@ var Parallax = (function() {
     });
 })();
 
+// The following module takes care of the navigation
+// "hamburger" when needed to.
 var Navigation = (function() {
 
   'use strict';
@@ -147,7 +152,7 @@ var ScrollControl = (function() {
 
   var treshold = 5;
   var previousScrollDistance = 0;
-  var $NAV = $('#navigation');
+  var $NAV = $('#navigation, .navigation__extras');
   var $WINDOW = $(window);
 
   /*var bindUIActions = function() {

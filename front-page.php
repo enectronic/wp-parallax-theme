@@ -125,13 +125,17 @@
           <?php endif; ?>
           <div class="team__member__contact">
             <?php if ( get_field( 'person-'. $i .'-email' ) ): ?>
-            <img class="team__member__email__img" src="<?php bloginfo('template_directory'); ?>/img/contact-mail.png" />
-            <p class="team__member__contact__email"><?php the_field( 'person-'. $i .'-email' ) ?></p>
+            <div class="team__member__contact__container">
+              <img class="team__member__email__img" src="<?php bloginfo('template_directory'); ?>/img/contact-mail.png" />
+              <p class="team__member__contact__email"><?php the_field( 'person-'. $i .'-email' ) ?></p>
+            </div>
             <?php endif; ?>
 
             <?php if ( get_field( 'person-'. $i .'-phone' ) ): ?>
-            <img class="team__member__phone__img" src="<?php bloginfo('template_directory'); ?>/img/contact-phone.png" />
-            <p class="team__member__contact__phone"><?php the_field( 'person-'. $i .'-phone' ) ?></p>
+            <div class="team__member__contact__container">
+              <img class="team__member__phone__img" src="<?php bloginfo('template_directory'); ?>/img/contact-phone.png" />
+              <p class="team__member__contact__phone"><?php the_field( 'person-'. $i .'-phone' ) ?></p>
+            </div>
             <?php endif; ?>
           </div>
         </div>

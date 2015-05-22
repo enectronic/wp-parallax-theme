@@ -6,7 +6,7 @@
   width: 100%;
   z-index: 1;
   @include linear-gradient(to right, transparent, rgba(13, 38,60, .6));
-transition: transform 250ms ease;
+  transition: transform 250ms ease;
   // Responsive queries
   @media screen and ( max-width: 768px ) {
     background: rgba(13, 38, 60, .4);
@@ -26,10 +26,43 @@ transition: transform 250ms ease;
   }
 }
 
+.navigation__extras {
+  // Component styles
+  display: none;
+  position: fixed;
+  right: 0;
+  z-index: 2;
+  transition: transform 250ms ease;
+  width: 50%;
+
+  // Component responsive queries
+  @media screen and ( min-width: 769px ) {
+    display: block;
+  }
+}
+
+.navigation__extras__inner {
+  position: relative;
+  float: right;
+  width: 25%;
+  text-align: center;
+}
+
+.navigation__extras__inner a {
+  float: left;
+  max-width: 50%;
+}
+
+.navigation__extras__inner img {
+  max-width: 100%;
+}
+
 .navigation__trigger {
   div {
     display: none;
   }
+
+  // Component responsive queries
   @media screen and ( max-width: 768px ) {
 
     display: block;

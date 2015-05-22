@@ -153,6 +153,30 @@
   }
 }
 
+.team__member__contact__container {
+  float: left;
+  display: table;
+  margin-bottom: $margin/4;
+
+  @media screen and ( max-width: 1000px ) {
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
+
+.team__member__contact__email,
+.team__member__contact__phone {
+  padding-left: $padding / 4;
+  display: table-cell;
+  vertical-align: bottom;
+
+  @media screen and ( max-width: 1000px ) {
+    display: block;
+    padding-left: 0;
+  }
+}
+
 // A members email address
 .team__member__contact__email {
   font-size: .9rem;
