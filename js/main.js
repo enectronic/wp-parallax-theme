@@ -195,27 +195,35 @@ var ScrollControl = (function() {
 
 })();
 
+// This widget/module is only functioning on smaller screen widths.
+// It takes care of hiding the list of skills and making them
+// toggle-able.
 var SkillSetWidget = (function() {
 
   'use strict';
 
+  // $CLICKABLE_HEADING is a skill set heading
   var $CLICKABLE_HEADING = $('.member__skills__heading');
 
+  // Attach event listeners.
   var bindUIActions = function() {
     $CLICKABLE_HEADING.on(CLICK_EVENT, function() {
       toggleSkillSet($(this).next('.member__skills__group'));
     });
   }
 
+  // The mains toggleing method.
   var toggleSkillSet = function($group) {
     $group.toggleClass('member__skills__group--opened');
   }
 
+  // Revealed publicly. (window).
   return {
     init: bindUIActions
   }
 })();
 
+// On document ready, do the following:
 $(function() {
   Navigation.init();
   SkillSetWidget.init();
