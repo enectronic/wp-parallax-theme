@@ -6,9 +6,10 @@ var CLICK_EVENT = (function() {
   'use strict';
 
   if ( 'ontouchstart' in window ) {
-    return 'touchend';
+    return 'touchend'; // Return early
   }
 
+  // Default is click
   return 'click';
 })();
 
@@ -128,24 +129,30 @@ var Navigation = (function() {
 
   'use strict';
 
+  // Needed jQuery variables.
   var $TRIGGER = $('#navigation__trigger');
   var $NAV = $('#navigation');
 
+  // Attach event listeners
   var bindUIActions = function() {
     $TRIGGER.on(CLICK_EVENT, toggleNavigation);
   };
 
+  // The main navigation toggle method
   var toggleNavigation = function() {
     $NAV.toggleClass('navigation--mobile__closed');
     $TRIGGER.find('div').toggleClass('navigation__trigger--opened');
   };
 
+  // The following is going to be revealed as public.
   return {
     init: bindUIActions
   }
 
 })();
 
+// This module takes care of showing or hiding the menu
+// depending on wether the user scrolls up or down.
 var ScrollControl = (function() {
 
   'use strict';
@@ -155,10 +162,8 @@ var ScrollControl = (function() {
   var $NAV = $('#navigation, .navigation__extras');
   var $WINDOW = $(window);
 
-  /*var bindUIActions = function() {
-    window.addEventListener('scroll', calculateScrollDistance);
-  };*/
-
+  // Calculate scroll distance and fire of either
+  // showMenu or hideMenu.
   var calculateScrollDistance = function() {
     var diff = $WINDOW.scrollTop() - previousScrollDistance;
 
@@ -173,6 +178,7 @@ var ScrollControl = (function() {
     previousScrollDistance = $WINDOW.scrollTop();
   }
 
+  // Main show/hide methods.
   var hideMenu = function() {
     $NAV.addClass('navigation--desktop__closed');
   }
@@ -181,6 +187,7 @@ var ScrollControl = (function() {
     $NAV.removeClass('navigation--desktop__closed');
   }
 
+  // Revealed publicly
   return {
     // Used by the scroll listener in the parallax module for now.
     calculateScrollDistance: calculateScrollDistance
