@@ -27,13 +27,13 @@ Template Name: Team Layout Page
         <?php if ( get_field( 'member_'. $i .'_email' ) ): ?>
         <div class="member__email__container">
           <img class="member__email__image" src="<?php bloginfo('template_directory'); ?>/img/mail_white.png" />
-          <p class="member__email"><?php the_field( 'member_'. $i .'_email' ); ?></p>
+          <a class="member__email" href="mailto:<?php the_field('member_'. $i .'_email') ?>"><?php the_field( 'member_'. $i .'_email' ); ?></a>
         </div>
         <?php endif; ?>
         <?php if ( get_field( 'member_'. $i .'_phone' ) ): ?>
         <div class="member__phone__container">
           <img class="member__phone__image" src="<?php bloginfo('template_directory'); ?>/img/phone_white.png" />
-          <p class="member__phone"><?php the_field( 'member_'. $i .'_phone' ); ?></p>
+          <a class="member__phone" href="tel:<?php the_field('member_'. $i .'_phone'); ?>"><?php the_field( 'member_'. $i .'_phone' ); ?></a>
         </div>
         <?php endif; ?>
       </div>
