@@ -4,7 +4,6 @@
  */
 function theme_scripts() {
 	wp_enqueue_style( 'Main CSS', get_stylesheet_uri() );
-	wp_enqueue_script( 'jQuery', get_template_directory_uri() . '/bower_components/jquery/dist/jquery.min.js', array(), '1.0.0', true );
 	wp_enqueue_script( 'Main js', get_template_directory_uri() . '/js/min/main-min.js', array(), '1.0.0', true );
 }
 
