@@ -19,4 +19,6 @@
   margin-bottom: -$margin / 1.5;
   width: 20%;
   max-width: 150px;
+  position: relative;
+  z-index: 1;
 }
