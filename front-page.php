@@ -27,9 +27,9 @@
       class="parallax__layer parallax__layer--clouds-front"
       id="clouds-front" width="1183" >
 
-		<img src="<?php bloginfo('template_directory'); ?>/img/parallax_climber.min.png"
+		<img src="<?php bloginfo('template_directory'); ?>/img/parallax_climber2.min.png"
       class="parallax__layer parallax__layer--climber"
-      id="climber" width="263">
+      id="climber" width="164">
 
 		<img src="<?php bloginfo('template_directory'); ?>/img/parallax_rock.min.png"
       class="parallax__layer parallax__layer--rocks"
