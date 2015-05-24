@@ -7,7 +7,6 @@ Template Name: Consultants Page
 
 <?php
   function createRow($idx) {
-    // Do stuff
     switch ( $idx ) {
       case $idx % 2 > 0:
         // odd
@@ -50,6 +49,33 @@ Template Name: Consultants Page
 
       default:
         // even
+        echo '<div class="consultants__info consultants__info--first">';
+        if ( get_field( 'consultants_heading_'. $idx ) ) {
+          echo '<h2 class="consultants__info__heading">';
+          echo the_field( 'consultants_heading_'. $idx );
+          echo '</h2>';
+        }
+        echo '<p class="consultants__info__prefix">Vi kan:</p>';
+        echo '<ul class="consultants__info__list">';
+
+        // If the custom field exists (a textarea),
+        // we want to split it into an array at each
+        // newline, then print a list item with each
+        // line from the textarea
+        if ( get_field( 'consultant_competences_'. $idx ) ) {
+
+            $text = get_field( 'consultant_competences_'. $idx );
+            $textArr = explode("\n", $text);
+            $textArr = array_filter($textArr, 'trim');
+
+            foreach ( $textArr as $line ) {
+              echo '<li class="consultants__info__list__item">'. $line .'</li>';
+            }
+
+
+        }
+        echo '</ul>';
+      echo '</div>';
         echo '<div class="consultants__illustration">';
         if ( get_field( 'consultant_image_'. $idx ) ) {
         ?>
@@ -57,7 +83,7 @@ Template Name: Consultants Page
         <?php
         }
         echo '</div>';
-        echo '<div class="consultants__info">';
+        echo '<div class="consultants__info consultants__info--last">';
         if ( get_field( 'consultants_heading_'. $idx ) ) {
           echo '<h2 class="consultants__info__heading">';
           echo the_field( 'consultants_heading_'. $idx );
@@ -145,12 +171,26 @@ Template Name: Consultants Page
   ?>
 
   <div class="consultants">
+    <div class="consultants__info--first">
+      <?php if ( get_field( 'consultants_heading_6' ) ): ?>
+      <h2 class="consultants__info__heading"><?php the_field( 'consultants_heading_6' ) ?></h2>
+      <?php endif; ?>
+      <?php
+        // If the custom field exists (a textarea),
+        // we want to split it into an array at each
+        // newline, then print a list item with each
+        // line from the textarea
+      ?>
+      <?php if ( get_field( 'consultant_competences_6' ) ): ?>
+        <p class="consultants__intro__text"><?php the_field('consultant_competences_6') ?></p>
+      <?php endif; ?>
+    </div>
     <div class="consultants__illustration">
       <?php if ( get_field( 'consultant_image_6' ) ): ?>
       <img class="consultants__illustration__image" src="<?php the_field( 'consultant_image_6' ) ?>" />
       <?php endif; ?>
     </div>
-    <div class="consultants__info">
+    <div class="consultants__info--last">
       <?php if ( get_field( 'consultants_heading_6' ) ): ?>
       <h2 class="consultants__info__heading"><?php the_field( 'consultants_heading_6' ) ?></h2>
       <?php endif; ?>
