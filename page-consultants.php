@@ -6,7 +6,7 @@ Template Name: Consultants Page
 <?php get_header(); ?>
 
 <?php
-  function createRow($idx) {
+  function create_row($idx) {
     switch ( $idx ) {
       case $idx % 2 > 0:
         // odd
@@ -158,7 +158,7 @@ Template Name: Consultants Page
   ?>
 
   <div class="consultants">
-    <?php createRow($i); ?>
+    <?php create_row($i); ?>
   </div>
   <div class="consultants__divider"></div>
 
