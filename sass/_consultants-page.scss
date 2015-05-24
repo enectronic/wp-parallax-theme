@@ -27,6 +27,7 @@
   }
 }
 
+// This class is hidden when in "desktop mode"
 .consultants__info--first {
   display: none;
 
@@ -35,6 +36,7 @@
   }
 }
 
+// This class is hidden when in "mobile mode"
 .consultants__info--last {
   @media screen and (max-width: 850px) {
     display: none;
