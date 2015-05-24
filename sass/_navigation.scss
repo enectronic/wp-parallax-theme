@@ -4,7 +4,7 @@
 	top: 0;
 	left: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 10;
   @include linear-gradient(to right, transparent, rgba(13, 38,60, .6));
   transition: transform 250ms ease;
   // Responsive queries
@@ -31,7 +31,7 @@
   display: none;
   position: fixed;
   right: 0;
-  z-index: 2;
+  z-index: 11;
   transition: transform 250ms ease;
   width: 50%;
   pointer-events: none;
@@ -70,7 +70,7 @@
 
     display: block;
     position: fixed;
-    z-index: 2;
+    z-index: 11;
     top: .6rem;
     right: .6rem;
     background: #0d263c;
