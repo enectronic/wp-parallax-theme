@@ -127,14 +127,18 @@
             <?php if ( get_field( 'person-'. $i .'-email' ) ): ?>
             <div class="team__member__contact__container">
               <img class="team__member__email__img" src="<?php bloginfo('template_directory'); ?>/img/contact-mail.png" />
-              <p class="team__member__contact__email"><?php the_field( 'person-'. $i .'-email' ) ?></p>
+              <a class="team__member__contact__email" href="mailto:<?php the_field( 'person-'. $i . '-email' ); ?>">
+                <?php the_field( 'person-'. $i .'-email' ) ?>
+              </a>
             </div>
             <?php endif; ?>
 
             <?php if ( get_field( 'person-'. $i .'-phone' ) ): ?>
             <div class="team__member__contact__container">
               <img class="team__member__phone__img" src="<?php bloginfo('template_directory'); ?>/img/contact-phone.png" />
-              <p class="team__member__contact__phone"><?php the_field( 'person-'. $i .'-phone' ) ?></p>
+              <a class="team__member__contact__phone" href="tel:<?php the_field( 'person-'. $i .'-phone' ); ?>">
+                <?php the_field( 'person-'. $i .'-phone' ) ?>
+              </a>
             </div>
             <?php endif; ?>
           </div>
