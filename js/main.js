@@ -109,8 +109,8 @@ var Parallax = (function() {
       });
 
       balloon.css({
-        '-webkit-transform': 'translate3d(0, ' + (- userScrollTop / 2).toFixed(2) + 'px, 0)',
-        'transform': 'translate3d(0, ' + (- userScrollTop / 2).toFixed(2) + 'px, 0)'
+        '-webkit-transform': 'translate3d('+ (-userScrollTop / 3).toFixed(2) +'px, ' + (- userScrollTop / 2).toFixed(2) + 'px, 0) rotateZ(-'+ 0.05*userScrollTop+'deg)',
+        'transform': 'translate3d('+ (-userScrollTop / 3).toFixed(2) +'px, ' + (- userScrollTop / 2).toFixed(2) + 'px, 0) rotateZ(-'+ 0.05*userScrollTop+'deg)'
       });
     };
 
