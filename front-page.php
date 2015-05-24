@@ -31,7 +31,7 @@
       class="parallax__layer parallax__layer--climber"
       id="climber" width="164">
 
-		<img src="<?php bloginfo('template_directory'); ?>/img/parallax_rock.min.png"
+		<img src="<?php bloginfo('template_directory'); ?>/img/parallax_rock2.min.png"
       class="parallax__layer parallax__layer--rocks"
       id="rocks" width="1920">
 	</div>

@@ -1,6 +1,6 @@
   <footer class="footer-front-page">
     <div class="footer-front-page__image__container">
-      <img class="footer-front-page__image" src="<?php bloginfo('template_directory'); ?>/img/parallax_rock.min.png" />
+      <img class="footer-front-page__image" src="<?php bloginfo('template_directory'); ?>/img/parallax_rock2.min.png" />
     </div>
     <img class="footer__logo" src="<?php bloginfo('template_directory'); ?>/img/parallax_logo.min.png" />
     <div class="footer-front-page__content">
