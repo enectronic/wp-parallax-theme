@@ -7,6 +7,11 @@
   padding: calc(2 * #{$padding});
   margin: $margin auto;
 
+  // Make sure that the bottom right image doesnt
+  // cover any of the text.
+  position: relative;
+  z-index: 1;
+
   // Component media queries
   @media screen and (max-width: 600px) {
       padding: $padding;
