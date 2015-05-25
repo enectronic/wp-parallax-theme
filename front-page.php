@@ -19,7 +19,7 @@
       class="parallax__layer parallax__layer--balloon"
       id="balloon" width="250">
 
-		<img src="<?php bloginfo('template_directory'); ?>/img/parallax_logo.min.png"
+		<img src="<?php bloginfo('template_directory'); ?>/img/parallax_logo2.min.png"
       class="parallax__layer parallax__layer--logo"
       id="logo" width="350">
 
