@@ -157,6 +157,11 @@
 		width: 100%;
 		text-align: center;
 		height: 100%;
+    transition: background 175ms ease;
+
+    &:hover {
+      background: rgba(17, 45, 69, .3);
+    }
 	}
 
   @media screen and ( max-width: 768px ) {
