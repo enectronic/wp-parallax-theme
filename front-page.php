@@ -21,7 +21,7 @@
 
 		<img src="<?php bloginfo('template_directory'); ?>/img/parallax_logo2.min.png"
       class="parallax__layer parallax__layer--logo"
-      id="logo" width="350">
+      id="logo" width="200">
 
 		<img src="<?php bloginfo('template_directory'); ?>/img/parallax_clouds_front.min.png"
       class="parallax__layer parallax__layer--clouds-front"
