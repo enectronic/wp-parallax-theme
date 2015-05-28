@@ -10,107 +10,110 @@ Template Name: Consultants Page
     switch ( $idx ) {
       case $idx % 2 > 0:
         // odd
-
-        echo '<div class="consultants__info">';
-        if ( get_field( 'consultants_heading_'. $idx ) ) {
-          echo '<h2 class="consultants__info__heading">';
-          echo the_field( 'consultants_heading_'. $idx );
-          echo '</h2>';
-        }
-        echo '<p class="consultants__info__prefix">Vi kan:</p>';
-        echo '<ul class="consultants__info__list">';
-
+        ?>
+        <div class="consultants__info">
+        <?php if ( get_field( 'consultants_heading_'. $idx ) ): ?>
+          <h2 class="consultants__info__heading">
+          <?php the_field( 'consultants_heading_'. $idx ); ?>
+          </h2>
+        <?php endif; ?>
+        <p class="consultants__info__prefix">Vi kan:</p>
+        <ul class="consultants__info__list">
+        <?php
         // If the custom field exists (a textarea),
         // we want to split it into an array at each
         // newline, then print a list item with each
         // line from the textarea
-        if ( get_field( 'consultant_competences_'. $idx ) ) {
+        ?>
+        <?php if ( get_field( 'consultant_competences_'. $idx ) ):
 
             $text = get_field( 'consultant_competences_'. $idx );
             $textArr = explode("\n", $text);
             $textArr = array_filter($textArr, 'trim');
 
             foreach ( $textArr as $line ) {
-              echo '<li class="consultants__info__list__item">'. $line .'</li>';
+              ?>
+              <li class="consultants__info__list__item"><?php echo $line ?></li>
+              <?php
             }
 
-
-        }
-        echo '</ul>';
-      echo '</div>';
-      echo '<div class="consultants__illustration">';
-      if ( get_field( 'consultant_image_'. $idx ) ) {
-        ?>
-          <img class="consultants__illustration__image" src="<?php the_field('consultant_image_'. $idx); ?>" />
-        <?php
-      }
-      echo '</div>';
-      break;
+        endif; ?>
+        </ul>
+      </div>
+      <div class="consultants__illustration">
+      <?php if ( get_field( 'consultant_image_'. $idx ) ): ?>
+        <img class="consultants__illustration__image" src="<?php the_field('consultant_image_'. $idx); ?>" />
+      <?php endif; ?>
+      </div>
+      <?php break;
 
       default:
         // even
-        echo '<div class="consultants__info consultants__info--first">';
-        if ( get_field( 'consultants_heading_'. $idx ) ) {
-          echo '<h2 class="consultants__info__heading">';
-          echo the_field( 'consultants_heading_'. $idx );
-          echo '</h2>';
-        }
-        echo '<p class="consultants__info__prefix">Vi kan:</p>';
-        echo '<ul class="consultants__info__list">';
-
-        // If the custom field exists (a textarea),
-        // we want to split it into an array at each
-        // newline, then print a list item with each
-        // line from the textarea
-        if ( get_field( 'consultant_competences_'. $idx ) ) {
-
-            $text = get_field( 'consultant_competences_'. $idx );
-            $textArr = explode("\n", $text);
-            $textArr = array_filter($textArr, 'trim');
-
-            foreach ( $textArr as $line ) {
-              echo '<li class="consultants__info__list__item">'. $line .'</li>';
-            }
-
-
-        }
-        echo '</ul>';
-      echo '</div>';
-        echo '<div class="consultants__illustration">';
-        if ( get_field( 'consultant_image_'. $idx ) ) {
         ?>
-          <img class="consultants__illustration__image" src="<?php the_field('consultant_image_'. $idx); ?>" />
+        <div class="consultants__info consultants__info--first">
+        <?php if ( get_field( 'consultants_heading_'. $idx ) ): ?>
+          <h2 class="consultants__info__heading">
+          <?php the_field( 'consultants_heading_'. $idx ); ?>
+          </h2>
+        <?php endif; ?>
+        <p class="consultants__info__prefix">Vi kan:</p>
+        <ul class="consultants__info__list">
         <?php
-        }
-        echo '</div>';
-        echo '<div class="consultants__info consultants__info--last">';
-        if ( get_field( 'consultants_heading_'. $idx ) ) {
-          echo '<h2 class="consultants__info__heading">';
-          echo the_field( 'consultants_heading_'. $idx );
-          echo '</h2>';
-        }
-        echo '<p class="consultants__info__prefix">Vi kan:</p>';
-        echo '<ul class="consultants__info__list">';
-
         // If the custom field exists (a textarea),
         // we want to split it into an array at each
         // newline, then print a list item with each
         // line from the textarea
-        if ( get_field( 'consultant_competences_'. $idx ) ) {
+        ?>
+        <?php if ( get_field( 'consultant_competences_'. $idx ) ):
 
             $text = get_field( 'consultant_competences_'. $idx );
             $textArr = explode("\n", $text);
             $textArr = array_filter($textArr, 'trim');
 
             foreach ( $textArr as $line ) {
-              echo '<li class="consultants__info__list__item">'. $line .'</li>';
+              ?>
+              <li class="consultants__info__list__item"><?php echo $line ?></li>
+              <?php
             }
 
 
-        }
-        echo '</ul>';
-      echo '</div>';
-      break;
+        endif; ?>
+        </ul>
+        </div>
+        <div class="consultants__illustration">
+        <?php if ( get_field( 'consultant_image_'. $idx ) ): ?>
+          <img class="consultants__illustration__image" src="<?php the_field('consultant_image_'. $idx); ?>" />
+        <?php endif; ?>
+        </div>
+        <div class="consultants__info consultants__info--last">
+        <?php if ( get_field( 'consultants_heading_'. $idx ) ): ?>
+          <h2 class="consultants__info__heading">
+            <?php the_field( 'consultants_heading_'. $idx ); ?>
+          </h2>
+        <?php endif; ?>
+        <p class="consultants__info__prefix">Vi kan:</p>
+        <ul class="consultants__info__list">
+        <?php
+        // If the custom field exists (a textarea),
+        // we want to split it into an array at each
+        // newline, then print a list item with each
+        // line from the textarea
+        ?>
+        <?php if ( get_field( 'consultant_competences_'. $idx ) ):
+
+            $text = get_field( 'consultant_competences_'. $idx );
+            $textArr = explode("\n", $text);
+            $textArr = array_filter($textArr, 'trim');
+
+            foreach ( $textArr as $line ) {
+              ?>
+              <li class="consultants__info__list__item"><?php echo $line ?></li>
+              <?php
+            }
+        endif; ?>
+        </ul>
+      </div>
+      <?php break;
     }
   }
 ?>
