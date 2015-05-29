@@ -3,7 +3,7 @@
  * in order to remove the 300ms delay for touch devices.
  * @namespace CLICK_EVENT
  * @memberof window
- * @returns {String} touchend or click
+ * @return {String} touchend or click
  */
 var CLICK_EVENT = (function() {
   'use strict';
@@ -146,8 +146,11 @@ var Parallax = (function() {
     });
 })();
 
-// The following module takes care of the navigation
-// "hamburger" when needed to.
+/**
+ * The following module takes care of the navigation "hamburger" menu.
+ * @namespace Navigation
+ * @memberof window
+ */
 var Navigation = (function() {
 
   'use strict';
@@ -157,12 +160,20 @@ var Navigation = (function() {
   var TRIGGER_SYMBOL = document.getElementById('navigation__trigger__symbol');
   var NAV = document.getElementById('navigation');
 
-  // Attach event listeners
+  /**
+   * Attaches the needed event listeners
+   * @function bindUIActions
+   * @memberof Navigation
+   */
   var bindUIActions = function() {
     TRIGGER.addEventListener(CLICK_EVENT, toggleNavigation);
   };
 
-  // The main navigation toggle method
+  /**
+   * The main navigation toggle method
+   * @function toggleNavigation
+   * @memberof Navigation
+   */
   var toggleNavigation = function() {
     if ( NAV.classList.contains('navigation--mobile__closed') ) {
       NAV.classList.remove('navigation--mobile__closed');
