@@ -1,3 +1,8 @@
+<?php
+// Header file that includes some meta content and that pulls in the
+// navigation and some other good-to-have stuff.
+// ===========================================================================
+?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
     <head>

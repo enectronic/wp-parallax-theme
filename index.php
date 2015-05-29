@@ -1,3 +1,7 @@
+<?php
+  // Sample file, not being used at the moment
+  // ===========================================================================
+  ?>
 <?php get_header(); ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 

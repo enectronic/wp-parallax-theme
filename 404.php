@@ -4,7 +4,11 @@
  */
 ?>
 <?php get_header(); ?>
-
+  <?php
+  // The 404 page. Will be shown when the user enters a URL that does not
+  // exist under the current domain.
+  // ===========================================================================
+  ?>
   <div class="container container--blue-gradient">
     <div class="container__404">
       <div class="inner__404">

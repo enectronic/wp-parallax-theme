@@ -1,3 +1,8 @@
+  <?php
+  // This is a footer for specific use on the front page since it needs to
+  // connect with the gradient on the page.
+  // ===========================================================================
+  ?>
   <footer class="footer-front-page">
     <div class="footer-front-page__image__container">
       <img class="footer-front-page__image" src="<?php bloginfo('template_directory'); ?>/img/parallax_rock2.min.png" />

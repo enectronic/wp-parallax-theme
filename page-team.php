@@ -5,6 +5,11 @@ Template Name: Team Layout Page
 ?>
 <?php get_header(); ?>
 
+<?php
+// The team page. Specifically layed out to match the design of the team page
+// ===========================================================================
+?>
+
 <div class="top-bar">
 
 </div>

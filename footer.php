@@ -1,3 +1,8 @@
+  <?php
+  // This footer is used on all pages but the front page. The front page has
+  // its own footer.
+  // ===========================================================================
+  ?>
   <footer class="footer">
     <img class="footer__image" src="<?php bloginfo('template_directory'); ?>/img/parallax_rock2.min.png" />
     <img class="footer__logo" src="<?php bloginfo('template_directory'); ?>/img/parallax_logo2.min.png" />

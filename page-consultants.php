@@ -6,6 +6,13 @@ Template Name: Consultants Page
 <?php get_header(); ?>
 
 <?php
+// This is a page template specially layed out for use on the "hide us/services"
+// page. It uses "create_row()" to create even and odd variations of the
+// sites image/text rows.
+// ===========================================================================
+?>
+
+<?php
   function create_row($idx) {
     switch ( $idx ) {
       case $idx % 2 > 0:
