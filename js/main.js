@@ -196,8 +196,12 @@ var Navigation = (function() {
 
 })();
 
-// This module takes care of showing or hiding the menu
-// depending on wether the user scrolls up or down.
+/**
+ * This module takes care of showing or hiding the menu
+ * depending on wether the user scrolls up or down.
+ * @namespace ScrollControl
+ * @memberof window
+ */
 var ScrollControl = (function() {
 
   'use strict';
@@ -207,8 +211,11 @@ var ScrollControl = (function() {
   var MAIN_NAV = document.getElementById('navigation')
   var NAV_EXTRAS = document.getElementById('navigation__extras')
 
-  // Calculate scroll distance and fire of either
-  // showMenu or hideMenu.
+  /**
+   * Calculate scroll distance and fire of either showMenu or hideMenu
+   * @function calculateScrollDistance
+   * @memberof ScrollControl
+   */
   var calculateScrollDistance = function() {
     var diff = document.body.scrollTop - previousScrollDistance;
 
@@ -223,12 +230,21 @@ var ScrollControl = (function() {
     previousScrollDistance = document.body.scrollTop;
   }
 
-  // Main show/hide methods.
+  /**
+   * Hides the manu
+   * @function hideMenu
+   * @memberof ScrollControl
+   */
   var hideMenu = function() {
     MAIN_NAV.classList.add('navigation--desktop__closed');
     NAV_EXTRAS.classList.add('navigation--desktop__closed');
   }
 
+  /**
+   * Shows the menu.
+   * @function showMenu
+   * @memberof ScrollControl
+   */
   var showMenu = function() {
     MAIN_NAV.classList.remove('navigation--desktop__closed');
     NAV_EXTRAS.classList.remove('navigation--desktop__closed');
