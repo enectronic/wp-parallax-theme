@@ -34,7 +34,7 @@ html, body {
 	// Component styles
   float: left;
 	width: 100%;
-	height: 100vh;
+	min-height: 100vh;
 
   // Component responsive queries
   @media screen and ( max-width: 960px ) {
@@ -47,12 +47,12 @@ html, body {
   @extend .container;
 
   background: rgb(13, 38, 60);
-  background-image: url(img/bg-mtns.png); /* fallback */
-  background-image: url(img/bg-mtns.png), -webkit-gradient(linear, left top, left bottom, from(rgb(13, 38, 60)), to(rgb(170,203,209))); /* Saf4+, Chrome */
-  background-image: url(img/bg-mtns.png), -webkit-linear-gradient(top, rgb(13, 38, 60), rgb(170,203,209)); /* Chrome 10+, Saf5.1+ */
-  background-image: url(img/bg-mtns.png),    -moz-linear-gradient(top, rgb(13, 38, 60), rgb(170,203,209)); /* FF3.6+ */
-  background-image: url(img/bg-mtns.png),      -o-linear-gradient(top, rgb(13, 38, 60), rgb(170,203,209)); /* Opera 11.10+ */
-  background-image: url(img/bg-mtns.png),         linear-gradient(to bottom, rgb(13, 38, 60), rgb(170,203,209)); /* W3C */
+  background-image: url(img/bg-mtns2.png); /* fallback */
+  background-image: url(img/bg-mtns2.png), -webkit-gradient(linear, left top, left bottom, from(rgb(13, 38, 60)), to(rgb(170,203,209))); /* Saf4+, Chrome */
+  background-image: url(img/bg-mtns2.png), -webkit-linear-gradient(top, rgb(13, 38, 60), rgb(170,203,209)); /* Chrome 10+, Saf5.1+ */
+  background-image: url(img/bg-mtns2.png),    -moz-linear-gradient(top, rgb(13, 38, 60), rgb(170,203,209)); /* FF3.6+ */
+  background-image: url(img/bg-mtns2.png),      -o-linear-gradient(top, rgb(13, 38, 60), rgb(170,203,209)); /* Opera 11.10+ */
+  background-image: url(img/bg-mtns2.png),         linear-gradient(to bottom, rgb(13, 38, 60), rgb(170,203,209)); /* W3C */
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: 100%;
@@ -68,7 +68,7 @@ html, body {
   @include linear-gradient(rgb(213, 205, 177), rgb(231, 227, 215));
 
   position: relative;
-  height: auto;
+  min-height: 0;
 }
 
 .container--blue-gradient {
@@ -76,7 +76,7 @@ html, body {
   @include linear-gradient(rgb(130, 172, 197), rgb(207, 225, 230));
 
   position: relative;
-  height: auto;
+  min-height: auto;
 }
 
 // Float classes
