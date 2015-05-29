@@ -42,14 +42,14 @@ Template Name: Team Layout Page
         </div>
         <?php endif; ?>
       </div>
-      <?php if ( get_field( 'member_'. $i .'_presentation' ) ): ?>
-      <div class="member__text">
-        <p><?php the_field( 'member_'. $i .'_presentation' ); ?></p>
-      </div>
-      <?php endif; ?>
     </div>
+    <?php if ( get_field( 'member_'. $i .'_presentation' ) ): ?>
+    <div class="member__text">
+      <p><?php the_field( 'member_'. $i .'_presentation' ); ?></p>
+    </div>
+    <?php endif; ?>
     <div class="member__skills__container">
-      <div class="member__skills__left">
+      <div class="member__skills__right">
         <?php if ( get_field( 'member_'. $i .'_skillset_1_heading' ) ): ?>
         <h3 class="member__skills__heading"><?php the_field( 'member_'. $i .'_skillset_1_heading' ) ?></h3>
         <?php endif; ?>
@@ -57,94 +57,6 @@ Template Name: Team Layout Page
           <?php
 
             $text = get_field( 'member_'. $i .'_skillset_1' );
-            $textArr = explode("\n", $text);
-            $textArr = array_filter($textArr, 'trim');
-
-            ?>
-            <div class="member__skills__group">
-            <?php
-            foreach ( $textArr as $line ) {
-
-              echo '<p class="member__skills__skill">'. $line .'</p>';
-
-            }
-            ?>
-            </div>
-        <?php endif; ?>
-        <?php if ( get_field( 'member_'. $i .'_skillset_2_heading' ) ): ?>
-        <h3 class="member__skills__heading"><?php the_field( 'member_'. $i .'_skillset_2_heading' ) ?></h3>
-        <?php endif; ?>
-        <?php if ( get_field( 'member_'. $i .'_skillset_2' ) ): ?>
-          <?php
-
-            $text = get_field( 'member_'. $i .'_skillset_2' );
-            $textArr = explode("\n", $text);
-            $textArr = array_filter($textArr, 'trim');
-
-            ?>
-            <div class="member__skills__group">
-            <?php
-            foreach ( $textArr as $line ) {
-
-              echo '<p class="member__skills__skill">'. $line .'</p>';
-
-            }
-          ?>
-          </div>
-        <?php endif; ?>
-      </div>
-      <div class="member__skills__right">
-        <?php if ( get_field( 'member_'. $i .'_skillset_3_heading' ) ): ?>
-        <h3 class="member__skills__heading"><?php the_field( 'member_'. $i .'_skillset_3_heading' ) ?></h3>
-        <?php endif; ?>
-        <?php if ( get_field( 'member_'. $i .'_skillset_3' ) ): ?>
-          <?php
-
-            $text = get_field( 'member_'. $i .'_skillset_3' );
-            $textArr = explode("\n", $text);
-            $textArr = array_filter($textArr, 'trim');
-
-            ?>
-            <div class="member__skills__group">
-            <?php
-            foreach ( $textArr as $line ) {
-
-              echo '<p class="member__skills__skill">'. $line .'</p>';
-
-            }
-            ?>
-            </div>
-        <?php endif; ?>
-
-        <?php if ( get_field( 'member_'. $i .'_skillset_4_heading' ) ): ?>
-        <h3 class="member__skills__heading"><?php the_field( 'member_'. $i .'_skillset_4_heading' ) ?></h3>
-        <?php endif; ?>
-        <?php if ( get_field( 'member_'. $i .'_skillset_4' ) ): ?>
-          <?php
-
-            $text = get_field( 'member_'. $i .'_skillset_4' );
-            $textArr = explode("\n", $text);
-            $textArr = array_filter($textArr, 'trim');
-
-            ?>
-            <div class="member__skills__group">
-            <?php
-            foreach ( $textArr as $line ) {
-
-              echo '<p class="member__skills__skill">'. $line .'</p>';
-
-            }
-            ?>
-            </div>
-        <?php endif; ?>
-
-        <?php if ( get_field( 'member_'. $i .'_skillset_5_heading' ) ): ?>
-        <h3 class="member__skills__heading"><?php the_field( 'member_'. $i .'_skillset_5_heading' ) ?></h3>
-        <?php endif; ?>
-        <?php if ( get_field( 'member_'. $i .'_skillset_5' ) ): ?>
-          <?php
-
-            $text = get_field( 'member_'. $i .'_skillset_5' );
             $textArr = explode("\n", $text);
             $textArr = array_filter($textArr, 'trim');
 

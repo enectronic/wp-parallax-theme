@@ -115,6 +115,8 @@
 
 // Member info text
 .member__text {
+  // Neat grid mixins
+  @include span-columns(4);
 
   // Component styles
   color: #fff;
@@ -122,70 +124,39 @@
   line-height: 1.5;
 
   // Media responsive queries
-  @media screen and ( max-width: 750px ) {
-    @include span-columns(12 of 12);
+  @media screen and ( max-width: 960px ) {
+    @include span-columns(6);
     margin-bottom: $margin / 4;
+  }
+
+  // Component responsive queries
+  @media screen and ( max-width: 600px ) {
+    margin-top: $margin;
+    @include span-columns(12);
   }
 }
 
 // Member skill list
 .member__skills__container {
   // Neat grid
-  @include span-columns(8);
+  @include span-columns(4);
   @include omega();
 
   // Component responsive queries
   @media screen and ( max-width: 960px ) {
-    @include span-columns(12);
-    margin-top: $margin;
+    @include span-columns(6);
+    @include omega();
+  }
+
+  @media screen and ( max-width: 750px ) {
+    @include span-columns(6);
+    @include omega();
+    margin-bottom: $margin / 4;
   }
 
   @media screen and ( max-width: 600px ) {
     @include span-columns(12 of 12);
     margin-top: $margin / 2;
-  }
-}
-
-.member__skills__group {
-  @media screen and ( max-width: 600px ) {
-    transition: all 250ms ease;
-    transform-origin: 0 50%;
-    max-height: 0;
-    transform: scaleY(0);
-  }
-}
-
-.member__skills__group--opened {
-  @media screen and ( max-width: 600px ) {
-    transition: all 250ms ease;
-    transform-origin: 0 50%;
-    max-height: 100%;
-    transform: scaleY(1);
-  }
-}
-
-.member__skills__left {
-  // Neat grid
-  @include span-columns(6 of 12);
-
-  // Media queries
-  @media screen and ( max-width: 960px ) {
-    @include span-columns(6 of 12);
-  }
-
-  @media screen and ( max-width: 600px ) {
-    @include span-columns(12 of 12);
-  }
-}
-
-.member__skills__right {
-  // Neat grid mixins
-  @include span-columns(6 of 12);
-
-  // Component responsive queries
-  @media screen and ( max-width: 600px ) {
-    margin-top: $margin;
-    @include span-columns(12 of 12);
   }
 }
 
