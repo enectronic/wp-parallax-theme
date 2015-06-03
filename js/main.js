@@ -48,16 +48,18 @@ var Parallax = (function() {
         water       = document.getElementById('water'),
         balloon     = document.getElementById('balloon')
 
-    // Interval because onscroll fires more randomly.
     /**
-     * Inverval method since onscroll fires more randomly.
      * @memberof Parallax
      * @function startInterval
      */
-    var startInterval = function() {
+    var animationLoop = function() {
+
       if ( userScrollTopReference < windowHeight && !intervalRunning ) {
-        parallaxScrollInterval = setInterval(function() { updatePage(); }, 7);
+        window.requestAnimationFrame(animationLoop);
+        translateElements();
         intervalRunning = true;
+      } else {
+        stopAnimationLoop();
       }
     };
 
@@ -68,23 +70,9 @@ var Parallax = (function() {
      * @function stopInterval
      * @memberof Parallax
      */
-    var stopInterval = function() {
-      clearInterval(parallaxScrollInterval);
+    var stopAnimationLoop = function() {
+      window.cancelAnimationFrame(animationLoop);
       intervalRunning = false;
-    };
-
-    // Request animation frame in order to more efficiently
-    // do the parallax scrolling animation.
-    /**
-     * Request animation frame in order to more efficiently
-     * do the parallax scrolling animation.
-     * @function updatePage
-     * @memberof Parallax
-     */
-    var updatePage = function() {
-      window.requestAnimationFrame(function() {
-        translateElements();
-      });
     };
 
     /**
@@ -112,7 +100,7 @@ var Parallax = (function() {
       // Also, cancel interval if the user reaches the top of
       // the page.
       if ( userScrollTop > windowHeight || userScrollTop === 0) {
-        stopInterval();
+        stopAnimationLoop();
       }
 
       // The transforms needed for the parallax scrolling effect.
@@ -142,7 +130,7 @@ var Parallax = (function() {
     window.addEventListener('scroll', function() {
       ScrollControl.calculateScrollDistance();
       userScrollTopReference = document.all ? iebody.scrollTop : pageYOffset;
-      startInterval();
+      if ( !intervalRunning ) animationLoop();
     });
 })();
 
