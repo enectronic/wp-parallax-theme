@@ -36,7 +36,6 @@ var Parallax = (function() {
     // scroll interval.
     var userScrollTopReference;
     var windowHeight = window.innerHeight;
-    var parallaxScrollInterval;
     var intervalRunning = false;
 
     // Elements to animate.
